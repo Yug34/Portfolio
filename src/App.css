@@ -95,29 +95,29 @@ body {
   transition: 0.5s;
 }
 
-#box1::before {
-  content: "All";
-}
+/*#box1::before {*/
+/*  content: "All";*/
+/*}*/
 
-#box1::after {
-  content: "BOT"
-}
+/*#box1::after {*/
+/*  content: "BOT"*/
+/*}*/
 
-#box2::before {
-  content: "CRUD";
-}
+/*#box2::before {*/
+/*  content: "CRUD";*/
+/*}*/
 
-#box2::after {
-  content: "API";
-}
+/*#box2::after {*/
+/*  content: "API";*/
+/*}*/
 
-#box3::before {
-  content: "IT'S";
-}
+/*#box3::before {*/
+/*  content: "IT'S";*/
+/*}*/
 
-#box3::after {
-  content: "RAININ'";
-}
+/*#box3::after {*/
+/*  content: "RAININ'";*/
+/*}*/
 
 .tiltContainer .box:hover::before, .tiltContainer .box:hover::after {
   opacity: 0.12;
