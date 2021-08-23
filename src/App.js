@@ -4,6 +4,9 @@ import WAVES from 'vanta/dist/vanta.waves.min'
 import Typed from 'typed.js';
 import {Carousel} from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Tilt from "react-parallax-tilt";
+
+import discordImg from "./images/discord.png"
 
 function App() {
     let [vantaRef] = useState(React.createRef());
@@ -47,13 +50,23 @@ function App() {
             <div className="App-header" ref={vantaRef}>
                 <Carousel
                     showArrows={true}
+                    statusFormatter={() => {}}
+                    useKeyboardArrows={true}
                 >
                     <div id="nameTitle">
                         <div id="name">Yug</div>
                         <div id="title"/>
                     </div>
-                    <div>
-                        <div className="sec" style={{height: "100vh", width:"100vw"}}>Hey!</div>
+                    <div className="tiltContainer" style={{height: "100vh", width:"100vw"}}>
+                        <Tilt className="box" id="box2" glareEnable={true} glareMaxOpacity={0.5} glareColor="#ffffff" glarePosition="bottom">
+                            {/*<div className="box" id="box2">*/}
+                                <h2 className="name">Stupid Blog</h2>
+                                <a href="https://github.com/Yug34/allbot" className="buy">View source</a>
+                                <a href="https://mystupidblog.herokuapp.com/" className="sell">View Live</a>
+                                <div className="circle"/>
+                                <img src={discordImg} className="product" alt="blog"/>
+                            {/*</div>*/}
+                        </Tilt>
                     </div>
                 </Carousel>
             </div>

@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 .App {
   text-align: center;
+}
+
+body {
+  overflow: hidden; /* Hide scrollbar */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -40,7 +46,196 @@
   transform: translate(-50%, -50%);
 }
 
-body {
-  overflow: hidden; /* Hide vertical scrollbar */
-  /*overflow-x: hidden; !* Hide horizontal scrollbar *!*/
+/*****************************************************/
+
+.tiltContainer {
+  margin: 10px auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1200px;
+  transform-style: preserve-3d;
+}
+
+.tiltContainer .box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  /*margin: 40px 50px;*/
+  background: transparent;
+  border: white 1px solid;
+  transform-style: preserve-3d;
+}
+
+.tiltContainer .box::before {
+  /*content: 'NIKE';*/
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 4em;
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.tiltContainer .box::after {
+  /*content: 'SHOES';*/
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 4em;
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+#box1::before {
+  content: "All";
+}
+
+#box1::after {
+  content: "BOT"
+}
+
+#box2::before {
+  content: "CRUD";
+}
+
+#box2::after {
+  content: "API";
+}
+
+#box3::before {
+  content: "IT'S";
+}
+
+#box3::after {
+  content: "RAININ'";
+}
+
+.tiltContainer .box:hover::before, .tiltContainer .box:hover::after {
+  opacity: 0.12;
+}
+
+.tiltContainer .box .name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  transform: translate3d(0,0,75px);
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+}
+
+.tiltContainer .box:hover .name {
+  top: 40px;
+  opacity: 1;
+}
+
+.tiltContainer .box .buy {
+  margin-right: auto;
+  margin-left: 0;
+  position: absolute;
+  bottom: 0;
+  /*left: 50px;*/
+  left: 70px;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, 0, 75px);
+  color: #fff;
+  background: transparent;
+  padding: 10px 25px;
+  border-radius: 30px;
+  border: white 1px solid;
+  text-decoration: none;
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+}
+
+.tiltContainer .box .sell {
+  margin-right: 0;
+  margin-left: auto;
+  position: absolute;
+  bottom: 0;
+  right: -60px;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, 0, 75px);
+  color: #fff;
+  background: transparent;
+  padding: 10px 25px;
+  border-radius: 30px;
+  border: white 1px solid;
+  text-decoration: none;
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+}
+
+.tiltContainer .box:hover .buy {
+  bottom: 30px;
+  opacity: 1;
+}
+
+.tiltContainer .box:hover .sell {
+  bottom: 30px;
+  opacity: 1;
+}
+
+.tiltContainer .box .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: 0.5s;
+  background: #fff;
+  transform-style: preserve-3d;
+  z-index: 9;
+  opacity: 1;
+  transform: translate3d(-50%, -50%, 50px);
+}
+
+.tiltContainer .box .product {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 200px;
+  z-index: 12;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, -50%, 50px) rotate(0deg) scale(0.9);
+  opacity: 0.5;
+}
+
+.tiltContainer .box:hover .product {
+  transform: translate3d(-50%, -50%, 100px) rotate(-15deg);
+  opacity: 0.8;
+}
+
+.tiltContainer .box:nth-child(1) .buy {
+  background: transparent;
+  border: white 1px solid;
+}
+
+.tiltContainer .box:nth-child(1) .sell {
+  background: transparent;
+  border: white 1px solid;
+}
+
+#moreProjects {
+  text-decoration: none;
+  color: white;
+  border: white 1px solid;
+  border-radius: 30px;
+  padding: 10px 25px;
 }
