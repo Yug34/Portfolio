@@ -6,12 +6,20 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Tilt from "react-parallax-tilt";
 
+import ReactCardFlip from "react-card-flip";
+
 import discordImg from "./images/discord.png";
 
 //TODO: Look into why the ::before ::after doesn't work
 
 function App() {
   let [vantaRef] = useState(React.createRef());
+  let [isFlipped, setIsFlipped] = useState(false);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    setIsFlipped(!isFlipped);
+  };
 
   useEffect(() => {
     // eslint-disable-next-line no-unused-vars
@@ -59,28 +67,35 @@ function App() {
             <div id="name">Yug</div>
             <div id="title" />
           </div>
+
           <div
             className="tiltContainer"
             style={{ height: "100vh", width: "100vw" }}
           >
-            <Tilt
-              className="box"
-              id="box1"
-              glareEnable={true}
-              glareMaxOpacity={0.5}
-              glareColor="#ffffff"
-              glarePosition="bottom"
-            >
-              <h2 className="name">AllBOT</h2>
-              <a href="https://github.com/Yug34/allbot" className="buy">
-                View source
-              </a>
-              <a href="https://mystupidblog.herokuapp.com/" className="sell">
-                View Live
-              </a>
-              <div className="circle" />
-              <img src={discordImg} className="product" alt="blog" />
-            </Tilt>
+            <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+              <Tilt
+                className="box"
+                id="box1"
+                glareEnable={true}
+                glareMaxOpacity={0.5}
+                glareColor="#ffffff"
+                glarePosition="bottom"
+              >
+                <h2 className="name">AllBOT</h2>
+                <a
+                  id="allbotSource"
+                  href="https://github.com/Yug34/allbot"
+                  className="buy"
+                  onClick={handleClick}
+                >
+                  View source
+                </a>
+                <div className="circle" />
+                <img src={discordImg} className="product" alt="blog" />
+              </Tilt>
+
+              <div>AAAAAAAAA</div>
+            </ReactCardFlip>
           </div>
         </Carousel>
       </div>

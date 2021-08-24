@@ -6,6 +6,7 @@
 
 body {
   overflow: hidden; /* Hide scrollbar */
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -83,7 +84,7 @@ body {
 }
 
 .tiltContainer .box::after {
-  /*content: 'SHOES';*/
+  content: 'BOT';
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -95,9 +96,9 @@ body {
   transition: 0.5s;
 }
 
-/*#box1::before {*/
-/*  content: "All";*/
-/*}*/
+.tiltContainer .box::before {
+  content: 'All';
+}
 
 /*#box1::after {*/
 /*  content: "BOT"*/
@@ -238,4 +239,8 @@ body {
   border: white 1px solid;
   border-radius: 30px;
   padding: 10px 25px;
+}
+
+#allbotSource {
+  font-size: 0.5em;
 }
