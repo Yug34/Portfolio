@@ -10,11 +10,13 @@ import ReactCardFlip from "react-card-flip";
 
 import discordImg from "./images/discord.png";
 
-//TODO: Look into why the ::before ::after doesn't work
-
 function App() {
   let [vantaRef] = useState(React.createRef());
   let [isFlipped, setIsFlipped] = useState(false);
+
+  // const changeClassName = (id, id2) => {
+  //  document.getElementById(id).style.borderColor = "#000000";
+  // };
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -64,7 +66,9 @@ function App() {
           useKeyboardArrows={true}
         >
           <div id="nameTitle">
-            <div id="name">Yug</div>
+            <div id="name">
+              <b>Yug</b>
+            </div>
             <div id="title" />
           </div>
 
@@ -74,7 +78,7 @@ function App() {
           >
             <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
               <Tilt
-                className="box"
+                className={isFlipped ? "nullbox" : "box"}
                 id="box1"
                 glareEnable={true}
                 glareMaxOpacity={0.5}
@@ -83,18 +87,45 @@ function App() {
               >
                 <h2 className="name">AllBOT</h2>
                 <a
-                  id="allbotSource"
+                  id="allbotMoreInfo"
                   href="https://github.com/Yug34/allbot"
                   className="buy"
-                  onClick={handleClick}
+                  onClick={(e) => {
+                    handleClick(e);
+                  }}
                 >
-                  View source
+                  More Info
                 </a>
                 <div className="circle" />
                 <img src={discordImg} className="product" alt="blog" />
               </Tilt>
-
-              <div>AAAAAAAAA</div>
+              <Tilt
+                className={isFlipped ? "box" : "nullbox"}
+                id="box2"
+                glareEnable={true}
+                glareMaxOpacity={0.5}
+                glareColor="#ffffff"
+                glarePosition="bottom"
+              >
+                <h2 className="name">AllBOT</h2>
+                <p
+                  id="allbotUnflip"
+                  className="buy"
+                  onClick={(e) => {
+                    handleClick(e);
+                  }}
+                >
+                  {/* TODO: Mouse pointer to the clicky hand */}
+                  Unflip
+                </p>
+                <a
+                  id="allbotSource"
+                  href="https://github.com/Yug34/allbot"
+                  className="buy"
+                >
+                  View Source
+                </a>
+              </Tilt>
             </ReactCardFlip>
           </div>
         </Carousel>
