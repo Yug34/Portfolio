@@ -154,12 +154,13 @@ body {
 }
 
 .tiltContainer .box .buy {
-  margin-right: auto;
-  margin-left: 0;
+  margin: 20px 25px 20px 20px;
+  /*margin-right: auto;*/
+  /*margin-left: 0;*/
   position: absolute;
   bottom: 0;
-  /*left: 50px;*/
-  left: 70px;
+  left: 50px;
+  /*left: 70px;*/
   transform-style: preserve-3d;
   transform: translate3d(-50%, 0, 75px);
   color: #fff;
@@ -174,8 +175,7 @@ body {
 }
 
 .tiltContainer .box .sell {
-  margin-right: 0;
-  margin-left: auto;
+  margin: 20px 20px 20px 25px;
   position: absolute;
   bottom: 0;
   right: -60px;
@@ -201,6 +201,12 @@ body {
   bottom: 30px;
   opacity: 1;
 }
+
+.tiltContainer .box .list {
+  align-items: normal;
+  font-size: 0.5em;
+}
+
 
 .tiltContainer .box .circle {
   position: absolute;

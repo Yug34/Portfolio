@@ -103,7 +103,12 @@ function App() {
                 glareColor="#ffffff"
                 glarePosition="bottom"
               >
-                <h2 className="name">AllBOT</h2>
+                <ul className="list">
+                  <li>
+                    Made with <i>Node.js</i>
+                  </li>
+                  <li>It's nice</li>
+                </ul>
                 <p
                   id="allbotUnflip"
                   className="buy"
@@ -116,7 +121,7 @@ function App() {
                 <a
                   id="allbotSource"
                   href="https://github.com/Yug34/allbot"
-                  className="buy"
+                  className="sell"
                 >
                   View Source
                 </a>
