@@ -14,10 +14,6 @@ function App() {
   let [vantaRef] = useState(React.createRef());
   let [isFlipped, setIsFlipped] = useState(false);
 
-  // const changeClassName = (id, id2) => {
-  //  document.getElementById(id).style.borderColor = "#000000";
-  // };
-
   const handleClick = (e) => {
     e.preventDefault();
     setIsFlipped(!isFlipped);
@@ -97,7 +93,7 @@ function App() {
                   More Info
                 </a>
                 <div className="circle" />
-                <img src={discordImg} className="product" alt="blog" />
+                <img src={discordImg} className="product" alt="discordImg" />
               </Tilt>
               <Tilt
                 className={isFlipped ? "box" : "nullbox"}
@@ -115,7 +111,6 @@ function App() {
                     handleClick(e);
                   }}
                 >
-                  {/* TODO: Mouse pointer to the clicky hand */}
                   Unflip
                 </p>
                 <a
