@@ -29,8 +29,9 @@ function App() {
       // smartBackspace: true,
       loop: true,
       loopCount: Infinity,
-      showCursor: false,
       fadeOut: true,
+      cursorChar: "|",
+      fadeOutClass: "typed-fade-out",
     });
   }, []);
 

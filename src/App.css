@@ -261,3 +261,12 @@ body {
 #allbotMoreInfo, #allbotSource, #allbotUnflip {
   font-size: 0.5em;
 }
+
+#title {
+  display: inline; /*To keep typing cursor on the same line*/
+  font-size: 0.5em;
+}
+
+.typed-cursor {
+  font-size: 0.5em;
+}
