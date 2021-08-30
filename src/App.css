@@ -149,7 +149,7 @@ body {
 }
 
 .tiltContainer .box:hover .name {
-  top: 40px;
+  top: 20px;
   opacity: 1;
 }
 
@@ -207,6 +207,9 @@ body {
   font-size: 0.5em;
 }
 
+.tiltContainer .box .list li {
+  margin: 10px 0;
+}
 
 .tiltContainer .box .circle {
   position: absolute;

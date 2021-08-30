@@ -106,9 +106,13 @@ function App() {
               >
                 <ul className="list">
                   <li>
-                    Made with <i>Node.js</i>
+                    Discord bot written in <i>Node.js</i>
                   </li>
-                  <li>It's nice</li>
+                  <li>Stream music from YouTube</li>
+                  <li>Currency system and a shop</li>
+                  <li>Snarky.</li>
+                  <li>Kanye quotes if you need them</li>
+                  <li>Aren't you sold already?</li>
                 </ul>
                 <p
                   id="allbotUnflip"
