@@ -5,7 +5,7 @@ import Typed from "typed.js";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import TiltContainer from "./Components/TiltContainer";
+import Projects from "./Components/Projects";
 import TypedName from "./Components/TypedName";
 
 function App() {
@@ -56,7 +56,7 @@ function App() {
         >
           <TypedName />
 
-          <TiltContainer />
+          <Projects />
         </Carousel>
       </div>
     </div>
