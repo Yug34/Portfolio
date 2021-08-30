@@ -81,6 +81,10 @@ body {
   transform-style: preserve-3d;
 }
 
+.tiltContainer .nullbox li, .tiltContainer .nullbox #allbotUnflip, .tiltContainer .nullbox #allbotSource {
+  font-size: 0;
+}
+
 .tiltContainer .box::before {
   /*content: 'NIKE';*/
   position: absolute;

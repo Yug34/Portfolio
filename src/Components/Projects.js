@@ -35,7 +35,7 @@ function Projects() {
             More Info
           </a>
           <div className="circle" />
-          <img src={discordImg} className="product" alt="discordImg" />
+          <img src={discordImg} className="product" alt="project_image" />
         </Tilt>
         <Tilt
           className={isFlipped ? "box" : "nullbox"}
