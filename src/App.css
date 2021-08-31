@@ -81,12 +81,12 @@ body {
   transform-style: preserve-3d;
 }
 
-.tiltContainer .nullbox li, .tiltContainer .nullbox #allbotUnflip, .tiltContainer .nullbox #allbotSource {
+.tiltContainer .nullbox li, .tiltContainer .nullbox #Unflip, .tiltContainer .nullbox #Source {
   font-size: 0;
 }
 
 .tiltContainer .box::before {
-  /*content: 'NIKE';*/
+  content: 'All';
   position: absolute;
   top: 20px;
   left: 20px;
@@ -110,14 +110,6 @@ body {
   opacity: 0;
   transition: 0.5s;
 }
-
-.tiltContainer .box::before {
-  content: 'All';
-}
-
-/*#box1::after {*/
-/*  content: "BOT"*/
-/*}*/
 
 /*#box2::before {*/
 /*  content: "CRUD";*/
@@ -265,7 +257,7 @@ body {
   padding: 10px 25px;
 }
 
-#allbotMoreInfo, #allbotSource, #allbotUnflip {
+#MoreInfo, #Source, #Unflip {
   font-size: 0.5em;
 }
 

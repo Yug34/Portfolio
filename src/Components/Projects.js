@@ -6,9 +6,10 @@ import Project from "./Project";
 
 function Projects() {
   const allBotDesc = [
-    "Discord bot written in <i>Node.js</i>",
+    "Discord bot written in Node.js",
     "Stream music from YouTube",
-    "Currency system and a shop",
+    "Currency system with Mongoose",
+    "A shop too!",
     "Snarky.",
     "Kanye quotes in case you need them",
     "Aren't you sold already?",

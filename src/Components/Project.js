@@ -24,7 +24,7 @@ function Project(props) {
       >
         <h2 className="name">{props.name}</h2>
         <a
-          id="allbotMoreInfo"
+          id="MoreInfo"
           href={props.link}
           className="buy"
           onClick={(e) => {
@@ -46,7 +46,7 @@ function Project(props) {
       >
         <ul className="list">{projectDescription}</ul>
         <p
-          id="allbotUnflip"
+          id="Unflip"
           className="buy"
           onClick={(e) => {
             handleClick(e);
@@ -54,7 +54,7 @@ function Project(props) {
         >
           Unflip
         </p>
-        <a id="allbotSource" href={props.link} className="sell">
+        <a id="Source" href={props.link} className="sell">
           View Source
         </a>
       </Tilt>
