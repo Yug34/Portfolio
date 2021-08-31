@@ -1,4 +1,6 @@
-import "./App.css";
+import "./Styles/App.css";
+import "./Styles/Arrow.css";
+
 import React, { useState, useEffect } from "react";
 import WAVES from "vanta/dist/vanta.waves.min";
 import Typed from "typed.js";
@@ -53,9 +55,48 @@ function App() {
           showArrows={true}
           statusFormatter={() => {}}
           useKeyboardArrows={true}
+          renderArrowPrev={(onClickHandler, hasPrev, label) =>
+            hasPrev && (
+              <div id="prevArrow">
+                <a
+                  className="arrow-up"
+                  style={{
+                    top: "43vh",
+                    "margin-left": "10vw",
+                    transform: "rotate(-90deg)",
+                  }}
+                >
+                  <div id="prevArrowContain">
+                    <span className="left-arm" />
+                    <span className="right-arm" />
+                    <span className="arrow-slide" />
+                  </div>
+                </a>
+              </div>
+            )
+          }
+          renderArrowNext={(onClickHandler, hasNext, label) =>
+            hasNext && (
+              <div id="nextArrow">
+                <a
+                  className="arrow-up"
+                  style={{
+                    top: "43vh",
+                    "margin-left": "90vw",
+                    transform: "rotate(90deg)",
+                  }}
+                >
+                  <div id="nextArrowContain">
+                    <span className="left-arm" />
+                    <span className="right-arm" />
+                    <span className="arrow-slide" />
+                  </div>
+                </a>
+              </div>
+            )
+          }
         >
           <TypedName />
-
           <Projects />
         </Carousel>
       </div>

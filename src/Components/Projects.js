@@ -9,7 +9,7 @@ function Projects() {
     "Discord bot written in Node.js",
     "Stream music from YouTube",
     "Currency system with Mongoose",
-    "A shop too!",
+    "..and a shop too!",
     "Snarky.",
     "Kanye quotes in case you need them",
     "Aren't you sold already?",

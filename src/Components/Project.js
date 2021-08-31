@@ -48,6 +48,7 @@ function Project(props) {
         <p
           id="Unflip"
           className="buy"
+          style={{ cursor: "pointer" }}
           onClick={(e) => {
             handleClick(e);
           }}
