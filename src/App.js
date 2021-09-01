@@ -48,48 +48,42 @@ function App() {
     });
   }, [vantaRef]);
 
+  const arrowStyles = {
+    position: 'absolute',
+    zIndex: 2,
+    top: 'calc(50% - 15px)',
+    width: 30,
+    height: 30,
+    cursor: 'pointer',
+  };
+
   return (
     <div className="App">
       <div className="App-header" ref={vantaRef}>
         <Carousel
           showArrows={true}
           statusFormatter={() => {}}
-          useKeyboardArrows={true}
-          renderArrowPrev={(onClickHandler, hasPrev, label) =>
-            hasPrev && (
-              <div id="prevArrow">
-                <a
-                  className="arrow-up"
-                  style={{
-                    top: "43vh",
-                    "margin-left": "10vw",
-                    transform: "rotate(-90deg)",
-                  }}
-                >
-                  <div id="prevArrowContain">
-                    <span className="left-arm" />
-                    <span className="right-arm" />
-                    <span className="arrow-slide" />
+          renderArrowNext={(onClickHandler, hasNext, label) =>
+            hasNext && (
+              <div id="nextArrow" onClick={onClickHandler} title={label}>
+                <a className="arrow-up" style={{top: "43vh", marginLeft: "90vw", transform: "rotate(90deg)"}}>
+                  <div id="nextArrowContain">
+                    <span className="left-arm"/>
+                    <span className="right-arm"/>
+                    <span className="arrow-slide"/>
                   </div>
                 </a>
               </div>
             )
           }
-          renderArrowNext={(onClickHandler, hasNext, label) =>
-            hasNext && (
-              <div id="nextArrow">
-                <a
-                  className="arrow-up"
-                  style={{
-                    top: "43vh",
-                    "margin-left": "90vw",
-                    transform: "rotate(90deg)",
-                  }}
-                >
-                  <div id="nextArrowContain">
-                    <span className="left-arm" />
-                    <span className="right-arm" />
-                    <span className="arrow-slide" />
+          renderArrowPrev={(onClickHandler, hasPrev, label) =>
+            hasPrev && (
+              <div id="prevArrow" onClick={onClickHandler} title={label}>
+                <a className="arrow-up" style={{top: "43vh", marginLeft: "10vw", transform: "rotate(-90deg)"}}>
+                  <div id="prevArrowContain">
+                    <span className="left-arm"/>
+                    <span className="right-arm"/>
+                    <span className="arrow-slide"/>
                   </div>
                 </a>
               </div>
@@ -105,3 +99,24 @@ function App() {
 }
 
 export default App;
+
+
+// <div id="nextArrow">
+//    <a class="arrow-up" style="top: 43vh; margin-left: 90vw; transform: rotate(90deg);">
+//      <div id="nextArrowContain">
+//        <span class="left-arm"></span>
+//        <span class="right-arm"></span>
+//        <span class="arrow-slide"></span>
+//      </div>
+//    </a>
+//  </div>
+//
+//     <div id="prevArrow">
+//       <a class="arrow-up" style="top: 43vh; margin-left: 10vw; transform: rotate(-90deg);">
+//         <div id="prevArrowContain">
+//           <span class="left-arm"></span>
+//           <span class="right-arm"></span>
+//           <span class="arrow-slide"></span>
+//         </div>
+//       </a>
+//     </div>

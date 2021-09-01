@@ -10,7 +10,7 @@ function Project(props) {
     setIsFlipped(!isFlipped);
   };
 
-  const projectDescription = props.description.map((text) => <li>{text}</li>);
+  const projectDescription = props.description.map((text) => <li key={text}>{text}</li>);
 
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
