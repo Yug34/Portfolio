@@ -269,3 +269,7 @@ body {
 .typed-cursor {
   font-size: 0.5em;
 }
+
+.projectCard {
+  margin: 25px;
+}

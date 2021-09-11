@@ -3,6 +3,7 @@ import React from "react";
 import discordImg from "../images/discord.png";
 
 import Project from "./Project";
+import {Carousel} from "react-responsive-carousel";
 
 function Projects() {
   const allBotDesc = [
@@ -17,12 +18,40 @@ function Projects() {
 
   return (
     <div className="tiltContainer" style={{ height: "100vh", width: "100vw" }}>
-      <Project
-        name="AllBOT"
-        Img={discordImg}
-        description={allBotDesc}
-        link="https://github.com/Yug34/allBOT"
-      />
+      <Carousel
+        showArrows={true}
+        statusFormatter={() => {}}
+        axis="vertical"
+      >
+        <div>
+          <Project
+            name="AllBOT"
+            Img={discordImg}
+            description={allBotDesc}
+            link="https://github.com/Yug34/allBOT"
+          />
+          <Project
+            name="AllBOT"
+            Img={discordImg}
+            description={allBotDesc}
+            link="https://github.com/Yug34/allBOT"
+          />
+        </div>
+        <div>
+          <Project
+            name="AllBOT"
+            Img={discordImg}
+            description={allBotDesc}
+            link="https://github.com/Yug34/allBOT"
+          />
+          <Project
+            name="AllBOT"
+            Img={discordImg}
+            description={allBotDesc}
+            link="https://github.com/Yug34/allBOT"
+          />
+        </div>
+      </Carousel>
     </div>
   );
 }
