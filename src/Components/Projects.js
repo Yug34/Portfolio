@@ -17,13 +17,20 @@ function Projects() {
   ];
 
   return (
-    <div className="tiltContainer" style={{ height: "100vh", width: "100vw" }}>
+    <div className="tiltContainer">
       <Carousel
         showArrows={true}
         statusFormatter={() => {}}
         axis="vertical"
+        showIndicators={false}
       >
-        <div>
+        <div style={{display: "flex"}}>
+          <Project
+            name="AllBOT"
+            Img={discordImg}
+            description={allBotDesc}
+            link="https://github.com/Yug34/allBOT"
+          />
           <Project
             name="AllBOT"
             Img={discordImg}
@@ -37,7 +44,13 @@ function Projects() {
             link="https://github.com/Yug34/allBOT"
           />
         </div>
-        <div>
+        <div style={{display: "flex"}}>
+          <Project
+            name="AllBOT"
+            Img={discordImg}
+            description={allBotDesc}
+            link="https://github.com/Yug34/allBOT"
+          />
           <Project
             name="AllBOT"
             Img={discordImg}
