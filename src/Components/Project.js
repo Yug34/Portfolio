@@ -56,7 +56,7 @@ function Project(props) {
           >
             Unflip
           </p>
-          <a id="Source" href={props.link} className="sell">
+          <a id="Source" href={props.link} target="_blank" rel="noopener noreferrer" className="sell">
             View Source
           </a>
         </Tilt>

@@ -39,14 +39,6 @@ body {
   }
 }
 
-#nameTitle {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
 /*****************************************************/
 
 .tiltContainer {
@@ -259,6 +251,14 @@ body {
 
 #MoreInfo, #Source, #Unflip {
   font-size: 0.5em;
+}
+
+#nameTitle {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 #title {

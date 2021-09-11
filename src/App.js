@@ -65,7 +65,7 @@ function App() {
           statusFormatter={() => {}}
           renderArrowNext={(onClickHandler, hasNext, label) =>
             hasNext && (
-              <div id="nextArrow" onClick={onClickHandler} title={label} style={{position: "absolute", zIndex: "100"}}>
+              <div id="nextArrow" onClick={onClickHandler} title={label} style={{zIndex: "100"}}>
                 <span className="arrow-up" style={{transform: "rotate(90deg)"}}>
                   <div id="nextArrowContain">
                     <span className="left-arm"/>
@@ -78,7 +78,7 @@ function App() {
           }
           renderArrowPrev={(onClickHandler, hasPrev, label) =>
             hasPrev && (
-              <div id="prevArrow" onClick={onClickHandler} title={label} style={{position: "absolute", zIndex: "100"}}>
+              <div id="prevArrow" onClick={onClickHandler} title={label} style={{zIndex: "100"}}>
                 <span className="arrow-up" style={{transform: "rotate(-90deg)"}}>
                   <div id="prevArrowContain">
                     <span className="left-arm"/>

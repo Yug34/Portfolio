@@ -166,6 +166,18 @@
     transform: translateY(200%);
 }
 
-.arrow-up {
+#nextArrow {
     position: fixed;
+    top: 50%;
+    right: 2%;
+    /*transform: translate(-50%, -50%);*/
+    /*-webkit-transform: translate(-50%, -50%);*/
+}
+
+#prevArrow {
+    position: fixed;
+    top: 50%;
+    left: 2%;
+    /*transform: translate(-50%, -50%);*/
+    /*-webkit-transform: translate(-50%, -50%);*/
 }
