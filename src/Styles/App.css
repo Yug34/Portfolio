@@ -253,6 +253,14 @@ body {
   font-size: 0.5em;
 }
 
+.typed-cursor {
+  font-size: 0.5em;
+}
+
+.projectCard {
+  margin: 25px;
+}
+
 #nameTitle {
   position: fixed;
   left: 50%;
@@ -264,12 +272,4 @@ body {
 #title {
   display: inline; /*To keep typing cursor on the same line*/
   font-size: 0.5em;
-}
-
-.typed-cursor {
-  font-size: 0.5em;
-}
-
-.projectCard {
-  margin: 25px;
 }
