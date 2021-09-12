@@ -4,9 +4,10 @@ import React from "react";
 import allbotImg from "../images/discord.png";
 import covidImg from "../images/coronavirus.png";
 import seamlessImg from "../images/volume.png";
+import portfolioGenImg from "../images/portfolioGen.png";
 
 import Project from "./Project";
-import {Carousel} from "react-responsive-carousel";
+import { Carousel } from "react-responsive-carousel";
 
 function Projects() {
   const allBotDesc = [
@@ -24,18 +25,10 @@ function Projects() {
     "~94.5% accuracy on the validation set",
     "... and ~96.6 on the test set!",
     "Oh and only 0.78% false negatives.",
-    "And hey, this project also won our team the IBM innovation camp 2021."
+    "And hey, this project also won our team the IBM innovation camp 2021.",
   ];
 
-  const seamlessDesc = [
-    "Full Stack music player",
-    "Stream music from YouTube",
-    "Currency system with Mongoose",
-    "..and a shop too!",
-    "Snarky.",
-    "Kanye quotes in case you need them",
-    "Aren't you sold already?",
-  ];
+  const seamlessDesc = ["Soon ^-^"];
 
   return (
     <div className="tiltContainer">
@@ -44,6 +37,10 @@ function Projects() {
         statusFormatter={() => {}}
         axis="vertical"
         showIndicators={false}
+        autoPlay={2}
+        infiniteLoop={true}
+        swipeable={true}
+        emulateTouch={true}
       >
         <div className="projectSlide">
           <Project
@@ -54,7 +51,7 @@ function Projects() {
             link="https://github.com/Yug34/allBOT"
           />
           <Project
-            name="COVID-19"
+            name="CoviDetect"
             keywords={["COV", "Detect"]}
             Img={covidImg}
             description={covidDesc}
@@ -70,14 +67,8 @@ function Projects() {
         </div>
         <div className="projectSlide">
           <Project
-            name="AllBOT"
-            Img={allbotImg}
-            description={allBotDesc}
-            link="https://github.com/Yug34/allBOT"
-          />
-          <Project
-            name="AllBOT"
-            Img={allbotImg}
+            name="Portfoliogen"
+            Img={portfolioGenImg}
             description={allBotDesc}
             link="https://github.com/Yug34/allBOT"
           />

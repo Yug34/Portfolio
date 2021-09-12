@@ -65,14 +65,23 @@ function App() {
         <Carousel
           showArrows={true}
           statusFormatter={() => {}}
+          infiniteLoop={true}
           renderArrowNext={(onClickHandler, hasNext, label) =>
             hasNext && (
-              <div id="nextArrow" onClick={onClickHandler} title={label} style={{zIndex: "100"}}>
-                <span className="arrow-up" style={{transform: "rotate(90deg)"}}>
+              <div
+                id="nextArrow"
+                onClick={onClickHandler}
+                title={label}
+                style={{ zIndex: "100" }}
+              >
+                <span
+                  className="arrow-up"
+                  style={{ transform: "rotate(90deg)" }}
+                >
                   <div id="nextArrowContain">
-                    <span className="left-arm"/>
-                    <span className="right-arm"/>
-                    <span className="arrow-slide"/>
+                    <span className="left-arm" />
+                    <span className="right-arm" />
+                    <span className="arrow-slide" />
                   </div>
                 </span>
               </div>
@@ -80,12 +89,20 @@ function App() {
           }
           renderArrowPrev={(onClickHandler, hasPrev, label) =>
             hasPrev && (
-              <div id="prevArrow" onClick={onClickHandler} title={label} style={{zIndex: "100"}}>
-                <span className="arrow-up" style={{transform: "rotate(-90deg)"}}>
+              <div
+                id="prevArrow"
+                onClick={onClickHandler}
+                title={label}
+                style={{ zIndex: "100" }}
+              >
+                <span
+                  className="arrow-up"
+                  style={{ transform: "rotate(-90deg)" }}
+                >
                   <div id="prevArrowContain">
-                    <span className="left-arm"/>
-                    <span className="right-arm"/>
-                    <span className="arrow-slide"/>
+                    <span className="left-arm" />
+                    <span className="right-arm" />
+                    <span className="arrow-slide" />
                   </div>
                 </span>
               </div>

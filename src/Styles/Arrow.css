@@ -117,6 +117,7 @@
     display: block;
     transform: rotate(-45deg);
 }
+
 .left-arm:after {
     content: "";
     background-color: #ffffff;
@@ -140,6 +141,7 @@
     transform: rotate(45deg);
     border-radius: 2px;
 }
+
 .right-arm:after {
     content: "";
     background-color: #ffffff;
@@ -155,12 +157,15 @@
 .arrow-up:hover {
     transition: all .1s;
 }
+
 .arrow-up:hover .left-arm:after {
     transform: rotate(-10deg);
 }
+
 .arrow-up:hover .right-arm:after {
     transform: rotate(10deg);
 }
+
 .arrow-up:hover .arrow-slide {
     transition: all .4s ease-in-out;
     transform: translateY(200%);

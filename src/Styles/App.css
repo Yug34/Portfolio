@@ -26,19 +26,6 @@ body {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /*****************************************************/
 
 .tiltContainer {
@@ -142,6 +129,7 @@ body {
 }
 
 .tiltContainer .box .buy {
+  cursor: pointer;
   margin: 20px 25px 20px 20px;
   /*margin-right: auto;*/
   /*margin-left: 0;*/
@@ -263,7 +251,7 @@ body {
 }
 
 #nameTitle {
-  position: fixed;
+  position: relative;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -277,4 +265,9 @@ body {
 
 .projectSlide {
   display: flex
+}
+
+.carousel-root {
+  height: 100vh;
+  width: 100vw;
 }

@@ -10,7 +10,9 @@ function Project(props) {
     setIsFlipped(!isFlipped);
   };
 
-  const projectDescription = props.description.map((text) => <li key={text}>{text}</li>);
+  const projectDescription = props.description.map((text) => (
+    <li key={text}>{text}</li>
+  ));
 
   return (
     <div className="projectCard">
@@ -52,14 +54,19 @@ function Project(props) {
             <p
               id="Unflip"
               className="buy"
-              style={{ cursor: "pointer" }}
               onClick={(e) => {
                 handleClick(e);
               }}
             >
               Unflip
             </p>
-            <a id="Source" href={props.link} target="_blank" rel="noopener noreferrer" className="sell">
+            <a
+              id="Source"
+              href={props.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sell"
+            >
               View Source
             </a>
           </Tilt>
