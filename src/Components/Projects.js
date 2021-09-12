@@ -1,6 +1,9 @@
 import React from "react";
+//https://raw.githubusercontent.com/Yug34/SeeVee/main/Yug_CV.pdf
 
-import discordImg from "../images/discord.png";
+import allbotImg from "../images/discord.png";
+import covidImg from "../images/coronavirus.png";
+import seamlessImg from "../images/volume.png";
 
 import Project from "./Project";
 import {Carousel} from "react-responsive-carousel";
@@ -8,6 +11,24 @@ import {Carousel} from "react-responsive-carousel";
 function Projects() {
   const allBotDesc = [
     "Discord bot written in Node.js",
+    "Stream music from YouTube",
+    "Currency system with Mongoose",
+    "..and a shop too!",
+    "Snarky.",
+    "Kanye quotes in case you need them",
+    "Aren't you sold already?",
+  ];
+
+  const covidDesc = [
+    "Made a DNN off ResNet50v2 to classify X-rays of human lungs into normal, pneumonia and covid cases.",
+    "~94.5% accuracy on the validation set",
+    "... and ~96.6 on the test set!",
+    "Oh and only 0.78% false negatives.",
+    "And hey, this project also won our team the IBM innovation camp 2021."
+  ];
+
+  const seamlessDesc = [
+    "Full Stack music player",
     "Stream music from YouTube",
     "Currency system with Mongoose",
     "..and a shop too!",
@@ -24,42 +45,45 @@ function Projects() {
         axis="vertical"
         showIndicators={false}
       >
-        <div style={{display: "flex"}}>
+        <div className="projectSlide">
           <Project
             name="AllBOT"
-            Img={discordImg}
+            keywords={["All", "BOT"]}
+            Img={allbotImg}
             description={allBotDesc}
             link="https://github.com/Yug34/allBOT"
           />
           <Project
-            name="AllBOT"
-            Img={discordImg}
-            description={allBotDesc}
-            link="https://github.com/Yug34/allBOT"
+            name="COVID-19"
+            keywords={["COV", "Detect"]}
+            Img={covidImg}
+            description={covidDesc}
+            link="https://github.com/Yug34/cov-detect"
           />
           <Project
-            name="AllBOT"
-            Img={discordImg}
-            description={allBotDesc}
+            name="Seamless"
+            keywords={["Music", "Player"]}
+            Img={seamlessImg}
+            description={seamlessDesc}
             link="https://github.com/Yug34/allBOT"
           />
         </div>
-        <div style={{display: "flex"}}>
+        <div className="projectSlide">
           <Project
             name="AllBOT"
-            Img={discordImg}
+            Img={allbotImg}
             description={allBotDesc}
             link="https://github.com/Yug34/allBOT"
           />
           <Project
             name="AllBOT"
-            Img={discordImg}
+            Img={allbotImg}
             description={allBotDesc}
             link="https://github.com/Yug34/allBOT"
           />
           <Project
             name="AllBOT"
-            Img={discordImg}
+            Img={allbotImg}
             description={allBotDesc}
             link="https://github.com/Yug34/allBOT"
           />

@@ -191,6 +191,7 @@ body {
 }
 
 .tiltContainer .box .list {
+  margin-right: 5px;
   align-items: normal;
   font-size: 0.5em;
 }
@@ -272,4 +273,8 @@ body {
 #title {
   display: inline; /*To keep typing cursor on the same line*/
   font-size: 0.5em;
+}
+
+.projectSlide {
+  display: flex
 }

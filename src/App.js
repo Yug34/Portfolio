@@ -1,3 +1,5 @@
+// <a href="https://raw.githubusercontent.com/Yug34/SeeVee/main/Yug_CV.pdf">Click here!</a>
+
 import "./Styles/App.css";
 import "./Styles/Arrow.css";
 
@@ -39,7 +41,7 @@ function App() {
       gyroControls: false,
       minHeight: 200.0,
       minWidth: 200.0,
-      scale: 2.0,
+      scale: 3.0,
       waveHeight: 11.5,
       waveSpeed: 0.7,
       scaleMobile: 1.0,
