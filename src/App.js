@@ -1,5 +1,3 @@
-// <a href="https://raw.githubusercontent.com/Yug34/SeeVee/main/Yug_CV.pdf">Click here!</a>
-
 import "./Styles/App.css";
 import "./Styles/Arrow.css";
 
@@ -11,6 +9,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import Projects from "./Components/Projects";
 import TypedName from "./Components/TypedName";
+import SeeVee from "./Components/SeeVee";
 
 function App() {
   let [vantaRef] = useState(React.createRef());
@@ -111,6 +110,7 @@ function App() {
         >
           <TypedName />
           <Projects />
+          <SeeVee />
         </Carousel>
       </div>
     </div>

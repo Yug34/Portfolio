@@ -29,13 +29,12 @@ body {
 /*****************************************************/
 
 .tiltContainer {
-  margin: 10px auto;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 1200px;
+  /*width: 1200px;*/
   transform-style: preserve-3d;
 }
 

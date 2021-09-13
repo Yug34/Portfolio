@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 //https://raw.githubusercontent.com/Yug34/SeeVee/main/Yug_CV.pdf
 
 import allbotImg from "../images/discord.png";
@@ -10,6 +10,16 @@ import Project from "./Project";
 import { Carousel } from "react-responsive-carousel";
 
 function Projects() {
+  const [auto, setAuto] = useState(true);
+
+  const stopAutoPlay = () => {
+    setAuto(false);
+  };
+
+  const startAutoPlay = () => {
+    setAuto(true);
+  };
+
   const allBotDesc = [
     "Discord bot written in Node.js",
     "Stream music from YouTube",
@@ -37,10 +47,12 @@ function Projects() {
         statusFormatter={() => {}}
         axis="vertical"
         showIndicators={false}
-        autoPlay={2}
         infiniteLoop={true}
-        swipeable={true}
-        emulateTouch={true}
+        autoPlay={true}
+        interval={2000}
+        stopOnHover={auto}
+        // swipeable={true}
+        // emulateTouch={true}
       >
         <div className="projectSlide">
           <Project
