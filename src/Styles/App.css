@@ -289,15 +289,30 @@ body {
   display: block;
 }
 
-#email, #emailLabel {
-  display: inline-block;
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+#email, #message {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: none;
+  font-size: 0.5em;
+  height: auto;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin: 0 0 30px;
+  resize: none;
 }
 
 #messageBlock {
   display: block;
 }
 
-#message, #messageLabel {
+#message {
   display: inline-block;
 }
 
