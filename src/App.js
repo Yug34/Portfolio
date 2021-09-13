@@ -1,3 +1,4 @@
+//    "react-parallax-tilt": "^1.5.55",
 import "./Styles/App.css";
 import "./Styles/Arrow.css";
 
@@ -10,6 +11,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Projects from "./Components/Projects";
 import TypedName from "./Components/TypedName";
 import SeeVee from "./Components/SeeVee";
+import ContactMe from "./Components/ContactMe";
 
 function App() {
   let [vantaRef] = useState(React.createRef());
@@ -17,14 +19,19 @@ function App() {
   useEffect(() => {
     // eslint-disable-next-line no-unused-vars
     let typed = new Typed("#title", {
-      strings: ["Software Engineer", "Research Assistant"],
-      typeSpeed: 70,
-      // backSpeed: 35,
-      // backDelay: 1000,
-      // smartBackspace: true,
+      strings: [
+        "Software Engineer",
+        "Research Assistant",
+        "Machine Learning guy",
+        "Future colleague of yours maybe?",
+      ],
+      typeSpeed: 50,
+      backSpeed: 35,
+      backDelay: 1000,
+      smartBackspace: true,
+      // fadeOut: true,
       loop: true,
       loopCount: Infinity,
-      fadeOut: true,
       cursorChar: "|",
       fadeOutClass: "typed-fade-out",
     });
@@ -111,6 +118,7 @@ function App() {
           <TypedName />
           <Projects />
           <SeeVee />
+          <ContactMe />
         </Carousel>
       </div>
     </div>
