@@ -1,4 +1,3 @@
-//    "react-parallax-tilt": "^1.5.55",
 import "./Styles/App.css";
 import "./Styles/Arrow.css";
 
@@ -21,19 +20,19 @@ function App() {
     let typed = new Typed("#title", {
       strings: [
         "Software Engineer",
-        "Research Assistant",
+        "Student Researcher",
         "Machine Learning guy",
-        "Future colleague of yours maybe?",
+        "<i class='greentext'>Future colleague of yours maybe?</i>",
       ],
       typeSpeed: 50,
       backSpeed: 35,
       backDelay: 1000,
       smartBackspace: true,
       // fadeOut: true,
+      // fadeOutClass: "typed-fade-out"
       loop: true,
       loopCount: Infinity,
       cursorChar: "|",
-      fadeOutClass: "typed-fade-out",
     });
   }, []);
 
@@ -55,15 +54,6 @@ function App() {
       color: 0x0,
     });
   }, [vantaRef]);
-
-  // const arrowStyles = {
-  //   position: 'absolute',
-  //   zIndex: 2,
-  //   top: 'calc(50% - 15px)',
-  //   width: 30,
-  //   height: 30,
-  //   cursor: 'pointer',
-  // };
 
   return (
     <div className="App">
