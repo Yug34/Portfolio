@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
 function ContactMe() {
   const [state, handleSubmit] = useForm("xpzkbzob");
+  const [value, setValue] = useState("Yug please work with me");
 
   if (state.succeeded) {
     return (
@@ -11,6 +12,10 @@ function ContactMe() {
       </div>
     );
   }
+
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
 
   return (
     <div className="formBox">
@@ -34,23 +39,35 @@ function ContactMe() {
               Subject:
             </label>
             <input
+              name="subject"
               className="formInput"
               id="subject"
               type="text"
-              name="subject"
               autoComplete="none"
+              value={value}
+              onChange={handleChange}
             />
           </div>
         </div>
         <ValidationError prefix="Email" field="email" errors={state.errors} />
         <div className="inputBlock" id="messageBlock">
           <label className="inputLabel" id="messageLabel" htmlFor="message">
-            Message
+            Message:
           </label>
           <textarea
             className="formInput"
             id="message"
             name="message"
+            autoComplete="none"
+          />
+          <label className="inputLabel" id="sideNoteLabel" htmlFor="sideNote">
+            An optional but highly recommended positive message to me pretty
+            please?
+          </label>
+          <textarea
+            className="formInput"
+            id="sideNote"
+            name="sideNote"
             autoComplete="none"
           />
         </div>
@@ -72,7 +89,7 @@ function ContactMe() {
           }}
           readOnly={true}
         />
-        <button type="submit" disabled={state.submitting}>
+        <button id="submitEmail" type="submit" disabled={state.submitting}>
           Submit
         </button>
       </form>
