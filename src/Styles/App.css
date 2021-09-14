@@ -285,19 +285,15 @@ body {
   border: 1px solid greenyellow;
 }
 
-#emailBlock {
+.inputBlock {
   display: block;
+  margin: 8px 10px;
 }
 
-label {
-  display: block;
-  margin-bottom: 8px;
-}
-
-#email, #message {
+.formInput {
   background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0);
   color: white;
-  border: none;
   font-size: 0.5em;
   height: auto;
   outline: 0;
@@ -308,12 +304,15 @@ label {
   resize: none;
 }
 
-#messageBlock {
-  display: block;
+.formInput:focus {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255, 255, 255, 0.7);;
 }
 
-#message {
-  display: inline-block;
+.inputLabel {
+  display: block;
+  float: left;
+  margin: 8px 10px;
 }
 
 .greentext {

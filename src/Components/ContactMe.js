@@ -16,18 +16,34 @@ function ContactMe() {
     <div className="formBox">
       <form onSubmit={handleSubmit}>
         Contact me!
-        <div id="emailBlock">
-          <label id="emailLabel" htmlFor="email">
+        <div className="inputBlock" id="emailBlock">
+          <label className="inputLabel" id="emailLabel" htmlFor="email">
             Email Address
           </label>
-          <input id="email" type="email" name="email" />
+          <input
+            className="formInput"
+            id="email"
+            type="email"
+            name="email"
+            autoComplete={false}
+          />
+          <label className="inputLabel" id="subjectLabel" htmlFor="subject">
+            Email Address
+          </label>
+          <input
+            className="formInput"
+            id="subject"
+            type="text"
+            name="subject"
+            autoComplete={false}
+          />
         </div>
         <ValidationError prefix="Email" field="email" errors={state.errors} />
-        <div id="messageBlock">
-          <label id="messageLabel" htmlFor="message">
+        <div className="inputBlock" id="messageBlock">
+          <label className="inputLabel" id="messageLabel" htmlFor="message">
             Message
           </label>
-          <textarea id="message" name="message" />
+          <textarea className="formInput" id="message" name="message" />
         </div>
         <ValidationError
           prefix="Message"
