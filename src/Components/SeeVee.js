@@ -40,16 +40,12 @@ function SeeVee() {
         <p>I made this for you:</p>
       </div>
       <a href={cvLink} id="cvLink">
-        <div id="cvImageContainer">
-          <img src={cvImage} alt="cv image" id="cvImage" />
-        </div>
+        {/*  <div id="cvImageContainer">*/}
+        <img src={cvImage} alt="cv image" id="cvImage" />
+        {/*</div>*/}
       </a>
     </div>
   );
 }
-
-/*Oh and did I ever mention I have a really nice*/
-/*as they like to call it. I generally charge an exorbitant amount but*/
-/*hey, you are special, I'll show it to you for free.*/
 
 export default SeeVee;

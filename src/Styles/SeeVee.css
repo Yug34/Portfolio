@@ -1,4 +1,5 @@
 #cvContainer {
+    margin: 10px 25px;
 }
 
 #cvText {
@@ -9,6 +10,8 @@
 }
 
 #cvLink {
+    height: fit-content;
+    width: fit-content;
 }
 
 #cvImageContainer {
