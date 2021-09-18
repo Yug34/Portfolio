@@ -5,12 +5,9 @@
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    border: 1px solid white;
 }
 
-.formBox-success {
-    border: 1px solid greenyellow;
-}
+
 
 .greentext {
     color: greenyellow;
@@ -41,7 +38,8 @@
     border: 1px solid rgba(255, 255, 255, 0.7);;
 }
 
-#email, #subject {
+#emailBlock, #messageBlock {
+    display: block;
 }
 
 .inputLabel {
@@ -52,6 +50,10 @@
 
 .inlineEmail, .inlineSubject {
     display: inline-block;
+}
+
+.inlineEmail {
+    float: left;
 }
 
 #submitEmail {
