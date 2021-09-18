@@ -44,6 +44,7 @@ function Projects() {
     <div className="tiltContainer">
       <Carousel
         showArrows={true}
+        showThumbs={false}
         statusFormatter={() => {}}
         axis="vertical"
         showIndicators={false}
