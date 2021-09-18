@@ -1,0 +1,24 @@
+#cvContainer {
+}
+
+#cvText {
+}
+
+.cvTextPara {
+    font-size: 0.5em;
+}
+
+#cvLink {
+}
+
+#cvImageContainer {
+    height: fit-content;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cvImage {
+    max-width:400px;
+    min-width:250px;
+}
