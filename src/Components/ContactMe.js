@@ -118,7 +118,16 @@ function ContactMe() {
               Submit
             </button>
           ) : (
-            <button>Can't submit</button>
+            <button
+              id="submitEmail"
+              type="submit"
+              style={{ border: "1px solid red" }}
+              onClick={(e) => {
+                e.preventDefault();
+              }}
+            >
+              Can't submit, fill the form
+            </button>
           )}
         </form>
       </div>

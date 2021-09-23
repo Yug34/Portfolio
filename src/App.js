@@ -16,7 +16,7 @@ import SeeVee from "./Components/SeeVee";
 import ContactMe from "./Components/ContactMe";
 
 function App() {
-  let [vantaRef] = useState(React.createRef());
+  const [vantaRef] = useState(React.createRef());
 
   useEffect(() => {
     // eslint-disable-next-line no-unused-vars
@@ -37,6 +37,12 @@ function App() {
       loopCount: Infinity,
       cursorChar: "|",
     });
+
+    let mql = window.matchMedia("all and (max-width: 767px)");
+    if (mql.matches) {
+      document.getElementById("prevArrow").style.display = "none";
+      document.getElementById("nextArrow").style.display = "none";
+    }
   }, []);
 
   useEffect(() => {
@@ -66,6 +72,7 @@ function App() {
           showArrows={true}
           statusFormatter={() => {}}
           infiniteLoop={true}
+          swipeScrollTolerance={20}
           renderArrowNext={(onClickHandler, hasNext, label) =>
             hasNext && (
               <div
