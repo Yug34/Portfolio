@@ -41,7 +41,7 @@ function SeeVee() {
       </div>
       <a href={cvLink} id="cvLink">
         {/*  <div id="cvImageContainer">*/}
-        <img src={cvImage} alt="cv image" id="cvImage" />
+        <img src={cvImage} alt="cv" id="cvImage" />
         {/*</div>*/}
       </a>
     </div>

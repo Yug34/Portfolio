@@ -3,7 +3,10 @@ import { useForm, ValidationError } from "@formspree/react";
 
 function ContactMe() {
   const [state, handleSubmit] = useForm("xpzkbzob");
-  const [value, setValue] = useState("Yug please work with me");
+  const [subjectValue, setSubjectValue] = useState("Yug please work with me");
+  const [emailValue, setEmailValue] = useState("");
+  const [messageValue, setMessageValue] = useState("");
+  const [sideNoteValue, setSideNoteValue] = useState("");
 
   if (state.succeeded) {
     return (
@@ -15,9 +18,9 @@ function ContactMe() {
     );
   }
 
-  const handleChange = (e) => {
-    setValue(e.target.value);
-  };
+  // const handleChange = (e) => {
+  //   setValue(e.target.value);
+  // };
 
   return (
     <div className="formBox">
@@ -35,6 +38,8 @@ function ContactMe() {
                 type="email"
                 name="email"
                 autoComplete="none"
+                value={emailValue}
+                onChange={(e) => setEmailValue(e.target.value)}
               />
             </div>
             <div className="inlineSubject">
@@ -47,8 +52,8 @@ function ContactMe() {
                 id="subject"
                 type="text"
                 autoComplete="none"
-                value={value}
-                onChange={handleChange}
+                value={subjectValue}
+                onChange={(e) => setSubjectValue(e.target.value)}
               />
             </div>
           </div>
@@ -62,6 +67,8 @@ function ContactMe() {
               id="message"
               name="message"
               autoComplete="none"
+              value={messageValue}
+              onChange={(e) => setMessageValue(e.target.value)}
             />
             <label className="inputLabel" id="sideNoteLabel" htmlFor="sideNote">
               An optional but highly recommended positive message to me pretty
@@ -72,6 +79,8 @@ function ContactMe() {
               id="sideNote"
               name="sideNote"
               autoComplete="none"
+              value={sideNoteValue}
+              onChange={(e) => setSideNoteValue(e.target.value)}
             />
           </div>
           <ValidationError
@@ -92,7 +101,18 @@ function ContactMe() {
             }}
             readOnly={true}
           />
-          <button id="submitEmail" type="submit" disabled={state.submitting}>
+          <button
+            id="submitEmail"
+            type="submit"
+            disabled={state.submitting}
+            onClick={(e) => {
+              if (!(emailValue && messageValue && subjectValue)) {
+                e.preventDefault();
+              }
+
+              console.log("AAAAAA");
+            }}
+          >
             Submit
           </button>
         </form>
