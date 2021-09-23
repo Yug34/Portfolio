@@ -6,23 +6,17 @@ function ContactMe() {
   const [emailValue, setEmailValue] = useState("");
   const [messageValue, setMessageValue] = useState("");
   const [sideNoteValue, setSideNoteValue] = useState("");
-  const [submitDisable, setSubmitDisable] = useState(true);
-  const updateDisable = () => {
-    if (!(emailValue && messageValue && subjectValue)) {
-      setSubmitDisable(true);
-    } else {
-      setSubmitDisable(false);
-    }
-  };
+
   if (state.succeeded) {
     return (
       <div className="formBox">
         <div style={{ border: "1px solid greenyellow" }}>
-          <p>Thanks for contacting me! You're awesome. :)</p>{" "}
+          <p>Thanks for contacting me! You're awesome. :)</p>
         </div>
       </div>
     );
   }
+
   return (
     <div className="formBox">
       <div style={{ border: "1px solid white" }}>
@@ -42,7 +36,6 @@ function ContactMe() {
                 value={emailValue}
                 onChange={(e) => {
                   setEmailValue(e.target.value);
-                  updateDisable();
                 }}
               />
             </div>
@@ -59,7 +52,6 @@ function ContactMe() {
                 value={subjectValue}
                 onChange={(e) => {
                   setSubjectValue(e.target.value);
-                  updateDisable();
                 }}
               />
             </div>
@@ -77,7 +69,6 @@ function ContactMe() {
               value={messageValue}
               onChange={(e) => {
                 setMessageValue(e.target.value);
-                updateDisable();
               }}
             />
             <label className="inputLabel" id="sideNoteLabel" htmlFor="sideNote">
@@ -92,7 +83,6 @@ function ContactMe() {
               value={sideNoteValue}
               onChange={(e) => {
                 setSideNoteValue(e.target.value);
-                updateDisable();
               }}
             />
           </div>
