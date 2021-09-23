@@ -1,27 +1,28 @@
 import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
-
 function ContactMe() {
   const [state, handleSubmit] = useForm("xpzkbzob");
   const [subjectValue, setSubjectValue] = useState("Yug please work with me");
   const [emailValue, setEmailValue] = useState("");
   const [messageValue, setMessageValue] = useState("");
   const [sideNoteValue, setSideNoteValue] = useState("");
-
+  const [submitDisable, setSubmitDisable] = useState(true);
+  const updateDisable = () => {
+    if (!(emailValue && messageValue && subjectValue)) {
+      setSubmitDisable(true);
+    } else {
+      setSubmitDisable(false);
+    }
+  };
   if (state.succeeded) {
     return (
       <div className="formBox">
         <div style={{ border: "1px solid greenyellow" }}>
-          <p>Thanks for contacting me! You're awesome. :)</p>
+          <p>Thanks for contacting me! You're awesome. :)</p>{" "}
         </div>
       </div>
     );
   }
-
-  // const handleChange = (e) => {
-  //   setValue(e.target.value);
-  // };
-
   return (
     <div className="formBox">
       <div style={{ border: "1px solid white" }}>
@@ -39,7 +40,10 @@ function ContactMe() {
                 name="email"
                 autoComplete="none"
                 value={emailValue}
-                onChange={(e) => setEmailValue(e.target.value)}
+                onChange={(e) => {
+                  setEmailValue(e.target.value);
+                  updateDisable();
+                }}
               />
             </div>
             <div className="inlineSubject">
@@ -53,11 +57,14 @@ function ContactMe() {
                 type="text"
                 autoComplete="none"
                 value={subjectValue}
-                onChange={(e) => setSubjectValue(e.target.value)}
+                onChange={(e) => {
+                  setSubjectValue(e.target.value);
+                  updateDisable();
+                }}
               />
             </div>
           </div>
-          <ValidationError prefix="Email" field="email" errors={state.errors} />
+          <ValidationError prefix="Email" field="email" errors={state.errors} />{" "}
           <div className="inputBlock" id="messageBlock">
             <label className="inputLabel" id="messageLabel" htmlFor="message">
               Message:
@@ -68,7 +75,10 @@ function ContactMe() {
               name="message"
               autoComplete="none"
               value={messageValue}
-              onChange={(e) => setMessageValue(e.target.value)}
+              onChange={(e) => {
+                setMessageValue(e.target.value);
+                updateDisable();
+              }}
             />
             <label className="inputLabel" id="sideNoteLabel" htmlFor="sideNote">
               An optional but highly recommended positive message to me pretty
@@ -80,7 +90,10 @@ function ContactMe() {
               name="sideNote"
               autoComplete="none"
               value={sideNoteValue}
-              onChange={(e) => setSideNoteValue(e.target.value)}
+              onChange={(e) => {
+                setSideNoteValue(e.target.value);
+                updateDisable();
+              }}
             />
           </div>
           <ValidationError
@@ -88,7 +101,7 @@ function ContactMe() {
             field="message"
             errors={state.errors}
           />
-          {/*Do not remove, You need at least one valid input field with autoComplete="on"*/}
+          {/*Do not remove, You need at least one valid input field with autoComplete="on"*/}{" "}
           <input
             type="text"
             autoComplete="on"
@@ -101,24 +114,25 @@ function ContactMe() {
             }}
             readOnly={true}
           />
-          <button
-            id="submitEmail"
-            type="submit"
-            disabled={state.submitting}
-            onClick={(e) => {
-              if (!(emailValue && messageValue && subjectValue)) {
-                e.preventDefault();
-              }
-
-              console.log("AAAAAA");
-            }}
-          >
-            Submit
-          </button>
+          {emailValue && messageValue && subjectValue ? (
+            <button
+              id="submitEmail"
+              type="submit"
+              disabled={state.submitting}
+              onClick={(e) => {
+                if (!(emailValue && messageValue && subjectValue)) {
+                  e.preventDefault();
+                }
+              }}
+            >
+              Submit
+            </button>
+          ) : (
+            <button>Can't submit</button>
+          )}
         </form>
       </div>
     </div>
   );
 }
-
 export default ContactMe;
