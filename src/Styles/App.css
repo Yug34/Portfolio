@@ -42,6 +42,26 @@ body {
   transform-style: preserve-3d;
 }
 
+/*.tiltContainer .carousel-root {*/
+/*  height: 100% !important;*/
+/*  width: 100% !important;*/
+/*}*/
+
+.carousel-root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+/*.carousel.carousel-slider {*/
+/*  !*left: 50%;*!*/
+/*  !*top: 50%;*!*/
+/*  !*-webkit-transform: translate(-50%, -50%);*!*/
+/*  !*transform: translate(-50%, -50%);*!*/
+/*}*/
+
 .tiltContainer .box {
   position: relative;
   width: 300px;
@@ -267,10 +287,6 @@ body {
 }
 
 .projectSlide {
-  display: flex
-}
-
-.carousel-root {
-  height: 100vh;
-  width: 100vw;
+  display: flex;
+  justify-content: center;
 }

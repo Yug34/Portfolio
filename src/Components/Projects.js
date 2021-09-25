@@ -50,7 +50,7 @@ function Projects() {
         showIndicators={false}
         infiniteLoop={true}
         autoPlay={true}
-        interval={2000}
+        interval={4000}
         stopOnHover={auto}
         // swipeable={true}
         // emulateTouch={true}
