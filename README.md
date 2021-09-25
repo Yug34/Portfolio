@@ -1,3 +1,5 @@
 # Portfolio
 
-Under construction! Will be hosted soon.
+Under construction! 
+
+[Hosted here](https://yug34.github.io/portfolio/)
