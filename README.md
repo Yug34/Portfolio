@@ -1,3 +1,3 @@
 # Portfolio
 
-Soon! Will host on pages with the react pages thing.
+Under construction! Will be hosted soon.

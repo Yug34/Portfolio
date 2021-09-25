@@ -33,11 +33,21 @@ function Projects() {
   const seamlessDesc = ["Soon ^-^"];
 
   const portolioGenDesc = [
-    "Takes user data as input",
+    "React.js web application that takes user data as input",
     "Stores data as a JSON object",
     "Produces a website as output from the JSON",
     "Output website is a react app, hostable on gh pages",
-    "...it's basically this site.",
+    "...which basically this site, just less personalised.",
+  ];
+
+  const csvqlDesc = [
+    "React.js web application to make SQL queries against CSV (and other) files.",
+    "Used AlaSQL.js to download, store, and operate on data stored in client's memory.",
+    "Has functionality to upload CSV files directly from client's system",
+    "..or fetch through an external link",
+    "..or even just type in data as input and operate on that.",
+    "Ability to download data and the queried results directly to PC as a CSV file, neat!",
+    "And the best part, this is all client-side, magic! :)",
   ];
 
   return (
@@ -86,10 +96,10 @@ function Projects() {
             link="https://github.com/Yug34/allBOT"
           />
           <Project
-            name="AllBOT"
+            name="CSVQL"
             Img={allbotImg}
-            description={allBotDesc}
-            link="https://github.com/Yug34/allBOT"
+            description={csvqlDesc}
+            link="https://github.com/Yug34/sql-csv-editor"
           />
         </div>
       </Carousel>
