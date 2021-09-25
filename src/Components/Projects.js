@@ -40,6 +40,14 @@ function Projects() {
 
   const seamlessDesc = ["Soon ^-^"];
 
+  const portolioGenDesc = [
+    "Takes user data as input",
+    "Stores data as a JSON object",
+    "Produces a website as output from the JSON",
+    "Output website is a react app, hostable on gh pages",
+    "...it's basically this site.",
+  ];
+
   return (
     <div className="tiltContainer">
       <Carousel
@@ -82,7 +90,7 @@ function Projects() {
           <Project
             name="Portfoliogen"
             Img={portfolioGenImg}
-            description={allBotDesc}
+            description={portolioGenDesc}
             link="https://github.com/Yug34/allBOT"
           />
           <Project

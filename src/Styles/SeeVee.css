@@ -19,9 +19,21 @@
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
 }
 
 #cvImage {
     max-width:400px;
     min-width:250px;
+    cursor: pointer;
+}
+
+.downloadCVBtn {
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid white;
+    background: transparent;
 }

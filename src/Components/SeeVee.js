@@ -8,42 +8,39 @@ function SeeVee() {
   );
   // "https://raw.githubusercontent.com/Yug34/SeeVee/master/Yug_CV.pdf"
 
+  const text = [
+    "Is that you? Finally! I've been waiting here, where have you been? How are you?",
+    "It's been ages, I feel like we don't know each other anymore.",
+    "We were really close, weren't we? Or maybe I'm getting you mixed up, it really has been that long.",
+    "Well, that's all behind us now, I'm just glad that you have come found me here.",
+    "I've been so preoccupied lately that I must have forgotten to call.",
+    "I'm sorry. The energy lies in learning, anyway, I'll learn to be better. For you, to you.",
+    "I've been thinking a lot about us. What we could be... it sounds silly.",
+  ];
+
+  const cvText = text.map((sentence) => (
+    <p className="cvTextPara" key={sentence}>
+      {sentence}
+    </p>
+  ));
+
   return (
     <div id="cvContainer">
       <div id="cvText">
-        <p className="cvTextPara">
-          Is that you? Finally! I've been waiting here, where have you been? How
-          are you?
-        </p>
-        <p className="cvTextPara">
-          It's been ages, I feel like we don't know each other anymore.
-        </p>
-        <p className="cvTextPara">
-          We were really close, weren't we? Or maybe I'm getting you mixed up,
-          it really has been that long.
-        </p>
-        <p className="cvTextPara">
-          Well, that's all behind us now, I'm just glad that you have come found
-          me here.
-        </p>
-        <p className="cvTextPara">
-          I've been so preoccupied lately that I must have forgotten to call.
-        </p>
-        <p className="cvTextPara">
-          I'm sorry. The energy lies in learning, anyway, I'll learn to be
-          better. For you, to you.
-        </p>
-        <p className="cvTextPara">
-          I've been thinking a lot about us. What we could be... it sounds
-          silly.
-        </p>
+        {cvText}
         <p>I made this for you:</p>
       </div>
-      <a href={cvLink} id="cvLink">
-        {/*  <div id="cvImageContainer">*/}
+      <div
+        id="cvImageContainer"
+        onClick={() => {
+          const link = document.createElement("a");
+          link.href = cvLink;
+          link.click();
+        }}
+      >
         <img src={cvImage} alt="cv" id="cvImage" />
-        {/*</div>*/}
-      </a>
+      </div>
+      <button className="downloadCVBtn">Download CV</button>
     </div>
   );
 }
