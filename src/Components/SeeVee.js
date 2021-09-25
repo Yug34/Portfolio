@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import cvImage from "../images/cv.jpg";
 
 function SeeVee() {
-  const [cvLink, setCvLink] = useState(
+  const [cvLink] = useState(
     "https://raw.githubusercontent.com/Yug34/SeeVee/master/Yug_CV.pdf"
   );
   // "https://raw.githubusercontent.com/Yug34/SeeVee/master/Yug_CV.pdf"

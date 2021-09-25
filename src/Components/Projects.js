@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 //https://raw.githubusercontent.com/Yug34/SeeVee/main/Yug_CV.pdf
 
 import allbotImg from "../images/discord.png";
@@ -9,17 +9,9 @@ import portfolioGenImg from "../images/portfolioGen.png";
 import Project from "./Project";
 import { Carousel } from "react-responsive-carousel";
 
+//TODO: Hover issue for projects carousel autoplay
+
 function Projects() {
-  const [auto, setAuto] = useState(true);
-
-  const stopAutoPlay = () => {
-    setAuto(false);
-  };
-
-  const startAutoPlay = () => {
-    setAuto(true);
-  };
-
   const allBotDesc = [
     "Discord bot written in Node.js",
     "Stream music from YouTube",
@@ -59,7 +51,7 @@ function Projects() {
         infiniteLoop={true}
         autoPlay={true}
         interval={4000}
-        stopOnHover={auto}
+        stopOnHover={true}
         // swipeable={true}
         // emulateTouch={true}
       >
