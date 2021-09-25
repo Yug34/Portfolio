@@ -3,6 +3,7 @@ import "./Styles/Arrow.css";
 import "./Styles/Scrollbar.css";
 import "./Styles/ContactPage.css";
 import "./Styles/SeeVee.css";
+import "./Styles/Projects.css";
 
 import React, { useState, useEffect } from "react";
 import WAVES from "vanta/dist/vanta.waves.min";
