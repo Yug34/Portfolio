@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import cvImage from "../images/cv.jpg";
 
+//TODO:  Fix download btn, doesn't create element and click it.
+
 function SeeVee() {
   const [cvLink] = useState(
     "https://raw.githubusercontent.com/Yug34/SeeVee/master/Yug_CV.pdf"
