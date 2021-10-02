@@ -4,6 +4,7 @@ import "./Styles/Scrollbar.css";
 import "./Styles/ContactPage.css";
 import "./Styles/SeeVee.css";
 import "./Styles/Projects.css";
+import "./Styles/Skills.css";
 
 import React, { useState, useEffect } from "react";
 import WAVES from "vanta/dist/vanta.waves.min";
@@ -12,6 +13,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import Projects from "./Components/Projects";
+import Skills from "./Components/Skills";
 import TypedName from "./Components/TypedName";
 import SeeVee from "./Components/SeeVee";
 import ContactMe from "./Components/ContactMe";
@@ -119,6 +121,7 @@ function App() {
         >
           <TypedName />
           <Projects />
+          <Skills />
           <SeeVee />
           <ContactMe />
         </Carousel>

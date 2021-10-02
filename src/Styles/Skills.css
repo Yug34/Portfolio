@@ -1,0 +1,8 @@
+.skill {
+    font-size: 0.5em;
+}
+
+.carousel .slide .skillSymbol {
+    height: 64px;
+    width: 64px;
+}

@@ -1,10 +1,10 @@
 import React from "react";
 //https://raw.githubusercontent.com/Yug34/SeeVee/main/Yug_CV.pdf
 
-import allbotImg from "../images/discord.png";
-import covidImg from "../images/coronavirus.png";
-import seamlessImg from "../images/volume.png";
-import portfolioGenImg from "../images/portfolioGen.png";
+import allbotImg from "../images/Projects/discord-small.png";
+import covidImg from "../images/Projects/coronavirus.png";
+import seamlessImg from "../images/Projects/volume.png";
+import portfolioGenImg from "../images/Projects/portfolioGen.png";
 
 import Project from "./Project";
 import { Carousel } from "react-responsive-carousel";
