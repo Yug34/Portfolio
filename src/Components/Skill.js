@@ -24,11 +24,10 @@ function Skill(props) {
     });
 
     bar.animate(props.scale);
-  }, []);
+  }, [props.scale, props.title]);
 
   return (
     <div className="skill">
-      {/*<p>{props.title}</p>*/}
       <img className="skillSymbol" src={props.symbol} alt={props.title} />
       {props.title}
       <div id={props.title} />

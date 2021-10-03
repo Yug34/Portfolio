@@ -12,11 +12,35 @@ function Skills() {
     },
   ];
 
-  const skillRendered = skillList.map((skill) => (
-    <Skill title={skill.title} symbol={skill.symbol} scale={skill.scale} />
+  const disclaimerItems = [
+    "Anyone could rate themselves arbitrarily and the assessing person would have no idea what the ratings mean.",
+    <u>
+      So, what exactly do I mean when I list these skills and give a rating to
+      myself?
+    </u>,
+    "If I list the language here, I know it's syntax. The rating isn't about syntactic knowledge of the languages.",
+    "Rather, it is about how much of the development paradigms and practices I know in the landscape of that language.",
+  ];
+
+  const disclaimerRendered = disclaimerItems.map((item) => (
+    <p key={item}>{item}</p>
   ));
 
-  return <div className="Skills">{skillRendered}</div>;
+  const skillRendered = skillList.map((skill) => (
+    <Skill
+      title={skill.title}
+      symbol={skill.symbol}
+      scale={skill.scale}
+      key={skill.title}
+    />
+  ));
+
+  return (
+    <div className="Skills">
+      <div id="disclaimer">{disclaimerRendered}</div>
+      {skillRendered}
+    </div>
+  );
 }
 
 export default Skills;

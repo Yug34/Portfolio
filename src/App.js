@@ -29,6 +29,7 @@ function App() {
         "Student Researcher",
         "Machine Learning guy",
         "<i class='greentext'>Future colleague of yours maybe?</i>",
+        "Open sourcerer",
       ],
       typeSpeed: 50,
       backSpeed: 35,

@@ -6,3 +6,7 @@
     height: 64px;
     width: 64px;
 }
+
+#disclaimer p {
+    font-size: 0.5em;
+}
