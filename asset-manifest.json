@@ -1,28 +1,26 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.bbd98579.chunk.css",
-    "main.js": "/portfolio/static/js/main.4015c24c.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.4015c24c.chunk.js.map",
-    "runtime-main.js": "/portfolio/static/js/runtime-main.75e89e51.js",
-    "runtime-main.js.map": "/portfolio/static/js/runtime-main.75e89e51.js.map",
+    "main.css": "/portfolio/static/css/main.f5b7568e.chunk.css",
+    "main.js": "/portfolio/static/js/main.c230ea4f.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.c230ea4f.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.8c085c6d.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.8c085c6d.js.map",
     "static/css/2.ed1298f3.chunk.css": "/portfolio/static/css/2.ed1298f3.chunk.css",
-    "static/js/2.65fb69fe.chunk.js": "/portfolio/static/js/2.65fb69fe.chunk.js",
-    "static/js/2.65fb69fe.chunk.js.map": "/portfolio/static/js/2.65fb69fe.chunk.js.map",
-    "static/js/3.2c4e78b7.chunk.js": "/portfolio/static/js/3.2c4e78b7.chunk.js",
-    "static/js/3.2c4e78b7.chunk.js.map": "/portfolio/static/js/3.2c4e78b7.chunk.js.map",
+    "static/js/2.d8366b89.chunk.js": "/portfolio/static/js/2.d8366b89.chunk.js",
+    "static/js/2.d8366b89.chunk.js.map": "/portfolio/static/js/2.d8366b89.chunk.js.map",
+    "static/js/3.13a2c37c.chunk.js": "/portfolio/static/js/3.13a2c37c.chunk.js",
+    "static/js/3.13a2c37c.chunk.js.map": "/portfolio/static/js/3.13a2c37c.chunk.js.map",
     "index.html": "/portfolio/index.html",
     "static/css/2.ed1298f3.chunk.css.map": "/portfolio/static/css/2.ed1298f3.chunk.css.map",
-    "static/css/main.bbd98579.chunk.css.map": "/portfolio/static/css/main.bbd98579.chunk.css.map",
-    "static/js/2.65fb69fe.chunk.js.LICENSE.txt": "/portfolio/static/js/2.65fb69fe.chunk.js.LICENSE.txt",
-    "static/media/coronavirus.fa855ef8.png": "/portfolio/static/media/coronavirus.fa855ef8.png",
-    "static/media/cv.4576e2a0.jpg": "/portfolio/static/media/cv.4576e2a0.jpg",
-    "static/media/discord.8dad80d5.png": "/portfolio/static/media/discord.8dad80d5.png"
+    "static/css/main.f5b7568e.chunk.css.map": "/portfolio/static/css/main.f5b7568e.chunk.css.map",
+    "static/js/2.d8366b89.chunk.js.LICENSE.txt": "/portfolio/static/js/2.d8366b89.chunk.js.LICENSE.txt",
+    "static/media/cv.4576e2a0.jpg": "/portfolio/static/media/cv.4576e2a0.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.75e89e51.js",
+    "static/js/runtime-main.8c085c6d.js",
     "static/css/2.ed1298f3.chunk.css",
-    "static/js/2.65fb69fe.chunk.js",
-    "static/css/main.bbd98579.chunk.css",
-    "static/js/main.4015c24c.chunk.js"
+    "static/js/2.d8366b89.chunk.js",
+    "static/css/main.f5b7568e.chunk.css",
+    "static/js/main.c230ea4f.chunk.js"
   ]
 }
