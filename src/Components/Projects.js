@@ -12,6 +12,34 @@ import { Carousel } from "react-responsive-carousel";
 //TODO: Hover issue for projects carousel autoplay
 
 function Projects() {
+  const projectList = [
+    {
+      name: "AllBOT",
+      keywords: ["All", "BOT"],
+      image: allbotImg,
+      description: [
+        "Discord bot written in Node.js",
+        "Stream music from YouTube",
+        "Currency system with Mongoose",
+        "..and a shop too!",
+        "Snarky.",
+        "Kanye quotes in case you need them",
+        "Aren't you sold already?",
+      ],
+      link: "https://github.com/Yug34/allBOT",
+    },
+  ];
+
+  const projects = projectList.map((project) => (
+    <Project
+      name={project.name}
+      keywords={project.keywords}
+      Img={project.image}
+      description={project.description}
+      link={project.link}
+    />
+  ));
+
   const allBotDesc = [
     "Discord bot written in Node.js",
     "Stream music from YouTube",
@@ -66,13 +94,14 @@ function Projects() {
         // emulateTouch={true}
       >
         <div className="projectSlide">
-          <Project
-            name="AllBOT"
-            keywords={["All", "BOT"]}
-            Img={allbotImg}
-            description={allBotDesc}
-            link="https://github.com/Yug34/allBOT"
-          />
+          {/*<Project*/}
+          {/*  name="AllBOT"*/}
+          {/*  keywords={["All", "BOT"]}*/}
+          {/*  Img={allbotImg}*/}
+          {/*  description={allBotDesc}*/}
+          {/*  link="https://github.com/Yug34/allBOT"*/}
+          {/*/>*/}
+          {projects}
           <Project
             name="CoviDetect"
             keywords={["COV", "Detect"]}

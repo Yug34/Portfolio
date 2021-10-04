@@ -19,7 +19,7 @@ function Skills() {
       myself?
     </u>,
     "If I list the language here, I know it's syntax. The rating isn't about syntactic knowledge of the languages.",
-    "Rather, it is about how much of the development paradigms and practices I know in the landscape of that language.",
+    "Rather, it is about how much of the development paradigms and practices I know in that language's landscape.",
   ];
 
   const disclaimerRendered = disclaimerItems.map((item) => (
