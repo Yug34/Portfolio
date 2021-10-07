@@ -8,16 +8,16 @@ import "./Styles/Skills.css";
 
 import React, { useState, useEffect } from "react";
 import WAVES from "vanta/dist/vanta.waves.min";
-import Typed from "typed.js";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
+import userDetails from "./userDetails";
 import Projects from "./Components/Projects";
 import Skills from "./Components/Skills";
 import TypedName from "./Components/TypedName";
 import SeeVee from "./Components/SeeVee";
 import ContactMe from "./Components/ContactMe";
-import userDetails from "./userDetails.json";
+import Typed from "typed.js";
 
 function App() {
   const [vantaRef] = useState(React.createRef());
@@ -25,13 +25,7 @@ function App() {
   useEffect(() => {
     // eslint-disable-next-line no-unused-vars
     const typed = new Typed("#title", {
-      strings: [
-        "Software Engineer",
-        "Student Researcher",
-        "Machine Learning guy",
-        "<i class='greentext'>Future colleague of yours maybe?</i>",
-        "Open sourcerer",
-      ],
+      strings: userDetails.nameTitles,
       typeSpeed: 50,
       backSpeed: 35,
       backDelay: 1000,
@@ -122,7 +116,7 @@ function App() {
           }
         >
           <TypedName name="Yug" />
-          <Projects />
+          <Projects projectList={userDetails.projectList} />
           <Skills />
           <SeeVee />
           <ContactMe />
