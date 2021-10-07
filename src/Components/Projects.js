@@ -50,6 +50,38 @@ function Projects(props) {
         stopOnHover={true}
         // swipeable={true}
         // emulateTouch={true}
+        renderArrowNext={(onClickHandler, hasNext, label) =>
+          hasNext && (
+            <div id="nextProjectArrow" onClick={onClickHandler}>
+              <a className="scroll-up" style={{ transform: "rotate(180deg)" }}>
+                <span className="left-bar" />
+                <span className="right-bar" />
+                <svg width="40" height="40">
+                  <line className="top" x1="0" y1="0" x2="120" y2="0" />
+                  <line className="left" x1="0" y1="40" x2="0" y2="-80" />
+                  <line className="bottom" x1="40" y1="40" x2="-80" y2="40" />
+                  <line className="right" x1="40" y1="0" x2="40" y2="1200" />
+                </svg>
+              </a>
+            </div>
+          )
+        }
+        renderArrowPrev={(onClickHandler, hasPrev, label) =>
+          hasPrev && (
+            <div id="prevProjectArrow" onClick={onClickHandler}>
+              <a className="scroll-up" style={{ transform: "rotate(0deg)" }}>
+                <span className="left-bar" />
+                <span className="right-bar" />
+                <svg width="40" height="40">
+                  <line className="top" x1="0" y1="0" x2="120" y2="0" />
+                  <line className="left" x1="0" y1="40" x2="0" y2="-80" />
+                  <line className="bottom" x1="40" y1="40" x2="-80" y2="40" />
+                  <line className="right" x1="40" y1="0" x2="40" y2="1200" />
+                </svg>
+              </a>
+            </div>
+          )
+        }
       >
         {projectSlides}
       </Carousel>

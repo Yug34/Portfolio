@@ -1,5 +1,6 @@
 import "./Styles/App.css";
 import "./Styles/Arrow.css";
+import "./Styles/ProjectArrow.css";
 import "./Styles/Scrollbar.css";
 import "./Styles/ContactPage.css";
 import "./Styles/SeeVee.css";
