@@ -1,6 +1,5 @@
 import React from "react";
 
-import allbotImg from "../images/Projects/discord-small.png";
 import Skill from "./Skill";
 
 function Skills(props) {
@@ -13,7 +12,7 @@ function Skills(props) {
     "If I list the language here, I know it's syntax. The rating isn't about syntactic knowledge of the languages.",
     <i className="greentext">
       Rather, it is about how much of the development frameworks, paradigms and
-      practices I know in that language's landscape.
+      practices I know in that language's ecosystem.
     </i>,
     "But of course, my confidence in myself while working with these technologies plays a part too :)",
   ];
@@ -32,7 +31,7 @@ function Skills(props) {
   ));
 
   return (
-    <div className="Skills">
+    <div className="skills">
       <div id="disclaimer">{disclaimerRendered}</div>
       {skillRendered}
     </div>

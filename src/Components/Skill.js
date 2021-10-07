@@ -28,9 +28,11 @@ function Skill(props) {
 
   return (
     <div className="skill">
-      <img className="skillSymbol" src={props.symbol} alt={props.title} />
-      {props.title}
-      <div id={props.title} />
+      <div>
+        <img className="skillSymbol" src={props.symbol} alt={props.title} />
+        <p className="skillName">{props.title}</p>
+      </div>
+      <div className="skillLevelBar" id={props.title} />
     </div>
   );
 }

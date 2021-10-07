@@ -1,12 +1,19 @@
-.skill {
+.skill p {
     font-size: 0.5em;
+    margin-top: 10px;
 }
 
 .carousel .slide .skillSymbol {
-    height: 64px;
-    width: 64px;
+    margin-top: 20px;
+    height: 32px;
+    width: 32px;
 }
 
 #disclaimer p {
     font-size: 0.5em;
+}
+
+.skillName {
+    display: block;
+    margin: 0;
 }

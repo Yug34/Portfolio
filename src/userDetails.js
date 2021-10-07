@@ -3,6 +3,9 @@ import covidImg from "./images/Projects/coronavirus.png";
 import seamlessImg from "./images/Projects/volume.png";
 import portfolioGenImg from "./images/Projects/portfolioGen.png";
 
+import cSkillImage from "./images/Skills/c-small.png";
+import cppSkillImage from "./images/Skills/cpp-small.png";
+
 const userDetails = {
   projectList: [
     {
@@ -87,13 +90,15 @@ const userDetails = {
   skills: [
     {
       title: "JavaScript",
-      symbol: allbotImg,
+      symbol: cSkillImage,
       scale: 0.6,
+      description: "Aaa",
     },
     {
       title: "TypeScript",
-      symbol: allbotImg,
+      symbol: cppSkillImage,
       scale: 0.6,
+      description: "Bbb",
     },
   ],
 };

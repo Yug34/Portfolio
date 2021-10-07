@@ -117,7 +117,7 @@ function App() {
         >
           <TypedName name="Yug" />
           <Projects projectList={userDetails.projectList} />
-          <Skills skills={userDetails.skills} />
+          {/*<Skills skills={userDetails.skills} />*/}
           <SeeVee
             cvLink={userDetails.seeVee.cvLink}
             cvText={userDetails.seeVee}
