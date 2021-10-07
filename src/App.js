@@ -17,13 +17,14 @@ import Skills from "./Components/Skills";
 import TypedName from "./Components/TypedName";
 import SeeVee from "./Components/SeeVee";
 import ContactMe from "./Components/ContactMe";
+import userDetails from "./userDetails.json";
 
 function App() {
   const [vantaRef] = useState(React.createRef());
 
   useEffect(() => {
     // eslint-disable-next-line no-unused-vars
-    let typed = new Typed("#title", {
+    const typed = new Typed("#title", {
       strings: [
         "Software Engineer",
         "Student Researcher",
@@ -42,7 +43,7 @@ function App() {
       cursorChar: "|",
     });
 
-    let mql = window.matchMedia("all and (max-width: 767px)");
+    const mql = window.matchMedia("all and (max-width: 767px)");
     if (mql.matches) {
       document.getElementById("prevArrow").style.display = "none";
       document.getElementById("nextArrow").style.display = "none";
@@ -52,7 +53,7 @@ function App() {
   useEffect(() => {
     // shininess: 57.00,
     // eslint-disable-next-line no-unused-vars
-    let vantaEffect = WAVES({
+    const vantaEffect = WAVES({
       el: vantaRef.current,
       mouseControls: true,
       touchControls: true,
@@ -120,7 +121,7 @@ function App() {
             )
           }
         >
-          <TypedName />
+          <TypedName name="Yug" />
           <Projects />
           <Skills />
           <SeeVee />

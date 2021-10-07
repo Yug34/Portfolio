@@ -1,10 +1,10 @@
 import React from "react";
 
-function TypedName() {
+function TypedName(props) {
   return (
     <div id="nameTitle">
       <div id="name">
-        <b>Yug</b>
+        <b>{props.name}</b>
       </div>
       <div id="title" />
     </div>

@@ -9,9 +9,7 @@ import portfolioGenImg from "../images/Projects/portfolioGen.png";
 import Project from "./Project";
 import { Carousel } from "react-responsive-carousel";
 
-//TODO: Hover issue for projects carousel autoplay
-
-function Projects() {
+function Projects(props) {
   const projectList = [
     {
       name: "AllBOT",
@@ -74,15 +72,32 @@ function Projects() {
     },
   ];
 
-  const projects = projectList.map((project) => (
-    <Project
-      key={project.name}
-      name={project.name}
-      keywords={project.keywords}
-      Img={project.image}
-      description={project.description}
-      link={project.link ? project.link : null}
-    />
+  const projectGroups = [];
+  for (let i = 0; i < projectList.length; i += 3) {
+    const group = [];
+    group.push(projectList[i]);
+    if (i + 1 < projectList.length) {
+      group.push(projectList[i + 1]);
+      if (i + 2 < projectList.length) {
+        group.push(projectList[i + 2]);
+      }
+    }
+    projectGroups.push(group);
+  }
+
+  const projectSlides = projectGroups.map((group) => (
+    <div className="projectSlide">
+      {group.map((project) => (
+        <Project
+          key={project.name}
+          name={project.name}
+          keywords={project.keywords}
+          Img={project.image}
+          description={project.description}
+          link={project.link ? project.link : null}
+        />
+      ))}
+    </div>
   ));
 
   return (
@@ -100,8 +115,7 @@ function Projects() {
         // swipeable={true}
         // emulateTouch={true}
       >
-        <div className="projectSlide">{projects}</div>
-        <div className="projectSlide"></div>
+        {projectSlides}
       </Carousel>
     </div>
   );
