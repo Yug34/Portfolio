@@ -117,8 +117,11 @@ function App() {
         >
           <TypedName name="Yug" />
           <Projects projectList={userDetails.projectList} />
-          <Skills />
-          <SeeVee />
+          <Skills skills={userDetails.skills} />
+          <SeeVee
+            cvLink={userDetails.seeVee.cvLink}
+            cvText={userDetails.seeVee}
+          />
           <ContactMe />
         </Carousel>
       </div>

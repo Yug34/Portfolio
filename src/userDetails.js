@@ -72,6 +72,30 @@ const userDetails = {
     "Machine Learning guy",
     "Open sourcerer",
   ],
+  seeVee: {
+    cvLink: "https://raw.githubusercontent.com/Yug34/SeeVee/master/Yug_CV.pdf",
+    cvText: [
+      "Is that you? Finally! I've been waiting here, where have you been? How are you?",
+      "It's been ages, I feel like we don't know each other anymore.",
+      "We were really close, weren't we? Or maybe I'm getting you mixed up, it really has been that long.",
+      "Well, that's all behind us now, I'm just glad that you have come found me here.",
+      "I've been so preoccupied lately that I must have forgotten to call.",
+      "I'm sorry. The energy lies in learning, anyway, I'll learn to be better. For you, to you.",
+      "I've been thinking a lot about us. What we could be... it sounds silly.",
+    ],
+  },
+  skills: [
+    {
+      title: "JavaScript",
+      symbol: allbotImg,
+      scale: 0.6,
+    },
+    {
+      title: "TypeScript",
+      symbol: allbotImg,
+      scale: 0.6,
+    },
+  ],
 };
 
 export default userDetails;

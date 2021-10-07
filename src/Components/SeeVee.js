@@ -1,11 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import cvImage from "../images/cv.jpg";
 
-function SeeVee() {
-  const [cvLink] = useState(
-    "https://raw.githubusercontent.com/Yug34/SeeVee/master/Yug_CV.pdf"
-  );
-
+function SeeVee(props) {
   const text = [
     "Is that you? Finally! I've been waiting here, where have you been? How are you?",
     "It's been ages, I feel like we don't know each other anymore.",
@@ -32,7 +28,7 @@ function SeeVee() {
         id="cvImageContainer"
         onClick={() => {
           const link = document.createElement("a");
-          link.href = cvLink;
+          link.href = props.cvLink;
           link.click();
         }}
       >

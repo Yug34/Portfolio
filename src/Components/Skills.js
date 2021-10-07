@@ -1,17 +1,9 @@
 import React from "react";
 
 import allbotImg from "../images/Projects/discord-small.png";
-
 import Skill from "./Skill";
-function Skills() {
-  const skillList = [
-    {
-      title: "JavaScript",
-      symbol: allbotImg,
-      scale: 0.6,
-    },
-  ];
 
+function Skills(props) {
   const disclaimerItems = [
     "Anyone could rate themselves arbitrarily and the assessing person would have no idea what the ratings mean.",
     <u>
@@ -19,14 +11,18 @@ function Skills() {
       myself?
     </u>,
     "If I list the language here, I know it's syntax. The rating isn't about syntactic knowledge of the languages.",
-    "Rather, it is about how much of the development paradigms and practices I know in that language's landscape.",
+    <i className="greentext">
+      Rather, it is about how much of the development frameworks, paradigms and
+      practices I know in that language's landscape.
+    </i>,
+    "But of course, my confidence in myself while working with these technologies plays a part too :)",
   ];
 
   const disclaimerRendered = disclaimerItems.map((item) => (
     <p key={item}>{item}</p>
   ));
 
-  const skillRendered = skillList.map((skill) => (
+  const skillRendered = props.skills.map((skill) => (
     <Skill
       title={skill.title}
       symbol={skill.symbol}
