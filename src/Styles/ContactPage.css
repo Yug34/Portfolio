@@ -5,6 +5,17 @@
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    margin-right: 250px;
+}
+
+.formBoxMobile {
+    font-size: 1em;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-right: 15px;
 }
 
 .greentext {
@@ -46,13 +57,9 @@
     margin: 8px 10px;
 }
 
-.inlineEmail, .inlineSubject {
-    display: inline-block;
-}
-
-.inlineEmail {
-    float: left;
-}
+/*.inlineEmail, .inlineSubject {*/
+/*    display: inline-block;*/
+/*}*/
 
 #submitEmail {
     color: white;

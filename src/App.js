@@ -21,6 +21,7 @@ import Typed from "typed.js";
 
 function App() {
   const [vantaRef] = useState(React.createRef());
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     // eslint-disable-next-line no-unused-vars
@@ -41,6 +42,7 @@ function App() {
     if (mql.matches) {
       document.getElementById("prevArrow").style.display = "none";
       document.getElementById("nextArrow").style.display = "none";
+      setIsMobile(true);
     }
   }, []);
 
@@ -122,7 +124,7 @@ function App() {
             cvLink={userDetails.seeVee.cvLink}
             cvText={userDetails.seeVee}
           />
-          <ContactMe />
+          <ContactMe isMobile={isMobile} />
         </Carousel>
       </div>
     </div>

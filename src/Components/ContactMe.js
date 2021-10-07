@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
-function ContactMe() {
+function ContactMe(props) {
   const [state, handleSubmit] = useForm("xpzkbzob");
   const [subjectValue, setSubjectValue] = useState("Yug please work with me");
   const [emailValue, setEmailValue] = useState("");
@@ -9,7 +9,7 @@ function ContactMe() {
 
   if (state.succeeded) {
     return (
-      <div className="formBox">
+      <div className={props.isMobile ? "formBoxMobile" : "formBox"}>
         <div style={{ border: "1px solid greenyellow" }}>
           <p>Thanks for contacting me! You're awesome. :)</p>
         </div>
@@ -18,10 +18,10 @@ function ContactMe() {
   }
 
   return (
-    <div className="formBox">
+    <div className={props.isMobile ? "formBoxMobile" : "formBox"}>
       <div style={{ border: "1px solid white" }}>
         <form onSubmit={handleSubmit}>
-          Contact me!
+          Contact me, don't be shy!
           <div className="inputBlock" id="emailBlock">
             <div className="inlineEmail">
               <label className="inputLabel" id="emailLabel" htmlFor="email">
