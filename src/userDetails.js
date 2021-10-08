@@ -2,6 +2,7 @@ import allbotImg from "./images/Projects/discord-small.png";
 import covidImg from "./images/Projects/coronavirus.png";
 import seamlessImg from "./images/Projects/volume.png";
 import portfolioGenImg from "./images/Projects/portfolioGen.png";
+import csvqlImg from "./images/Projects/csvql.png";
 
 import cSkillImage from "./images/Skills/c-small.png";
 import cppSkillImage from "./images/Skills/cpp-small.png";
@@ -12,6 +13,7 @@ const userDetails = {
       name: "AllBOT",
       keywords: ["All", "BOT"],
       image: allbotImg,
+      imageScale: "1",
       description: [
         "Discord bot written in Node.js",
         "Stream music from YouTube",
@@ -27,6 +29,7 @@ const userDetails = {
       name: "CoviDetect",
       keywords: ["COV", "Detect"],
       image: covidImg,
+      imageScale: "1",
       description: [
         "Made a DNN off ResNet50v2 to classify X-rays of human lungs into normal, pneumonia and covid cases.",
         "~94.5% accuracy on the validation set",
@@ -40,11 +43,15 @@ const userDetails = {
       name: "Seamless",
       keywords: ["Music", "Player"],
       image: seamlessImg,
+      imageScale: "1",
       description: ["Soon ^-^"],
+      link: "https://github.com/SeamlessOrg/seamless-backend",
     },
     {
       name: "PortfolioGen",
+      keywords: ["site", "gen"],
       image: portfolioGenImg,
+      imageScale: "1",
       description: [
         "React.js web application that takes user data as input",
         "Stores data as a JSON object",
@@ -55,7 +62,9 @@ const userDetails = {
     },
     {
       name: "CSVQL",
-      image: allbotImg,
+      keywords: ["get da", "dayta"],
+      image: csvqlImg,
+      imageScale: "0.6",
       description: [
         "React.js web application to make SQL queries against CSV (and other) files.",
         "Used AlaSQL.js to download, store, and operate on data stored in client's memory.",

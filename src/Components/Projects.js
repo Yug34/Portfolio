@@ -26,6 +26,7 @@ function Projects(props) {
       {group.map((project) => (
         <Project
           key={project.name}
+          imageScale={project.imageScale}
           name={project.name}
           keywords={project.keywords}
           Img={project.image}
@@ -52,8 +53,15 @@ function Projects(props) {
         // emulateTouch={true}
         renderArrowNext={(onClickHandler, hasNext, label) =>
           hasNext && (
-            <div id="nextProjectArrow" onClick={onClickHandler}>
-              <a className="scroll-up" style={{ transform: "rotate(180deg)" }}>
+            <div
+              className="projectArrow"
+              id="nextProjectArrow"
+              onClick={onClickHandler}
+            >
+              <div
+                className="scroll-up"
+                style={{ transform: "rotate(180deg)" }}
+              >
                 <span className="left-bar" />
                 <span className="right-bar" />
                 <svg width="40" height="40">
@@ -62,14 +70,18 @@ function Projects(props) {
                   <line className="bottom" x1="40" y1="40" x2="-80" y2="40" />
                   <line className="right" x1="40" y1="0" x2="40" y2="1200" />
                 </svg>
-              </a>
+              </div>
             </div>
           )
         }
         renderArrowPrev={(onClickHandler, hasPrev, label) =>
           hasPrev && (
-            <div id="prevProjectArrow" onClick={onClickHandler}>
-              <a className="scroll-up" style={{ transform: "rotate(0deg)" }}>
+            <div
+              className="projectArrow"
+              id="prevProjectArrow"
+              onClick={onClickHandler}
+            >
+              <div className="scroll-up" style={{ transform: "rotate(0deg)" }}>
                 <span className="left-bar" />
                 <span className="right-bar" />
                 <svg width="40" height="40">
@@ -78,7 +90,7 @@ function Projects(props) {
                   <line className="bottom" x1="40" y1="40" x2="-80" y2="40" />
                   <line className="right" x1="40" y1="0" x2="40" y2="1200" />
                 </svg>
-              </a>
+              </div>
             </div>
           )
         }

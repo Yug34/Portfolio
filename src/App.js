@@ -14,11 +14,11 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import userDetails from "./userDetails";
 import Projects from "./Components/Projects";
-import Skills from "./Components/Skills";
 import TypedName from "./Components/TypedName";
 import SeeVee from "./Components/SeeVee";
 import ContactMe from "./Components/ContactMe";
 import Typed from "typed.js";
+import Skills from "./Components/Skills";
 
 function App() {
   const [vantaRef] = useState(React.createRef());
@@ -120,7 +120,7 @@ function App() {
         >
           <TypedName name="Yug" />
           <Projects projectList={userDetails.projectList} />
-          {/*<Skills skills={userDetails.skills} />*/}
+          <Skills skills={userDetails.skills} />
           <SeeVee
             cvLink={userDetails.seeVee.cvLink}
             cvText={userDetails.seeVee}

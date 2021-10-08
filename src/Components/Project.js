@@ -38,7 +38,12 @@ function Project(props) {
               More Info
             </a>
             <div className="circle" />
-            <img src={props.Img} className="product" alt="project_image" />
+            <img
+              src={props.Img}
+              style={{ width: `${100 * props.imageScale}%` }}
+              className="product"
+              alt="project_image"
+            />
           </Tilt>
         </div>
         <div>
