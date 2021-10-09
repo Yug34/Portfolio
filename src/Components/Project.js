@@ -28,7 +28,6 @@ function Project(props) {
           >
             <h2 className="name">{props.name}</h2>
             <a
-              id="MoreInfo"
               href={props.link}
               className="buy"
               onClick={(e) => {
@@ -57,7 +56,6 @@ function Project(props) {
           >
             <ul className="list">{projectDescription}</ul>
             <p
-              id="Unflip"
               className="buy"
               onClick={(e) => {
                 handleClick(e);
@@ -67,7 +65,6 @@ function Project(props) {
             </p>
             {props.link ? (
               <a
-                id="Source"
                 href={props.link}
                 target="_blank"
                 rel="noopener noreferrer"

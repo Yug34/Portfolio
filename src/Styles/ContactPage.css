@@ -61,12 +61,11 @@
     font-size: 1em;
 }
 
-#submitEmail {
+.submitEmail {
     color: white;
     padding: 10px 20px;
     margin: 10px 0;
     cursor: pointer;
     text-align: center;
-    border: 1px solid white;
     background: transparent;
 }

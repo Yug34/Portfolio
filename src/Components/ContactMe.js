@@ -24,7 +24,12 @@ function ContactMe(props) {
           Contact me, don't be shy!
           <div className="inputBlock" id="emailBlock">
             <div className="inlineEmail">
-              <label className="inputLabel" id="emailLabel" htmlFor="email">
+              <label
+                className="inputLabel"
+                id="emailLabel"
+                htmlFor="email"
+                aria-labelledby="Email Address Input"
+              >
                 Email Address:
               </label>
               <input
@@ -40,7 +45,12 @@ function ContactMe(props) {
               />
             </div>
             <div className="inlineSubject">
-              <label className="inputLabel" id="subjectLabel" htmlFor="subject">
+              <label
+                className="inputLabel"
+                id="subjectLabel"
+                htmlFor="subject"
+                aria-labelledby="Email Subject Input"
+              >
                 Subject:
               </label>
               <input
@@ -58,7 +68,12 @@ function ContactMe(props) {
           </div>
           <ValidationError prefix="Email" field="email" errors={state.errors} />{" "}
           <div className="inputBlock" id="messageBlock">
-            <label className="inputLabel" id="messageLabel" htmlFor="message">
+            <label
+              className="inputLabel"
+              id="messageLabel"
+              htmlFor="message"
+              aria-labelledby="Message Input Area"
+            >
               Message:
             </label>
             <textarea
@@ -71,7 +86,12 @@ function ContactMe(props) {
                 setMessageValue(e.target.value);
               }}
             />
-            <label className="inputLabel" id="sideNoteLabel" htmlFor="sideNote">
+            <label
+              className="inputLabel"
+              id="sideNoteLabel"
+              htmlFor="sideNote"
+              aria-labelledby="A nice little side note input"
+            >
               An optional but highly recommended positive message to me pretty
               please?
             </label>
@@ -106,8 +126,10 @@ function ContactMe(props) {
           />
           {emailValue && messageValue && subjectValue ? (
             <button
-              id="submitEmail"
+              id="submitEmailBtn"
+              className="submitEmail"
               type="submit"
+              style={{ border: "1px solid white" }}
               disabled={state.submitting}
               onClick={(e) => {
                 if (!(emailValue && messageValue && subjectValue)) {
@@ -119,7 +141,8 @@ function ContactMe(props) {
             </button>
           ) : (
             <button
-              id="submitEmail"
+              id="redSubmitEmailBtn"
+              className="submitEmail"
               type="submit"
               style={{ border: "1px solid red" }}
               onClick={(e) => {
