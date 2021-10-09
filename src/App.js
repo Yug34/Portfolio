@@ -74,6 +74,8 @@ function App() {
           showArrows={true}
           statusFormatter={() => {}}
           infiniteLoop={true}
+          autoPlay={true}
+          interval={1000000}
           swipeScrollTolerance={20}
           renderArrowNext={(onClickHandler, hasNext, label) =>
             hasNext && (
