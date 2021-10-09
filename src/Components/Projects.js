@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Project from "./Project";
 import { Carousel } from "react-responsive-carousel";
@@ -6,19 +6,23 @@ import { Carousel } from "react-responsive-carousel";
 //TODO: Investigate if the userDetails would work if you do src={require("./pathToImage")}
 
 function Projects(props) {
-  const projectList = props.projectList;
-
   const projectGroups = [];
-  for (let i = 0; i < projectList.length; i += 3) {
-    const group = [];
-    group.push(projectList[i]);
-    if (i + 1 < projectList.length) {
-      group.push(projectList[i + 1]);
-      if (i + 2 < projectList.length) {
-        group.push(projectList[i + 2]);
-      }
+  if (props.isMobile) {
+    for (let i = 0; i < props.projectList.length; i++) {
+      projectGroups.push([props.projectList[i]]);
     }
-    projectGroups.push(group);
+  } else {
+    for (let i = 0; i < props.projectList.length; i += 3) {
+      const group = [];
+      group.push(props.projectList[i]);
+      if (i + 1 < props.projectList.length) {
+        group.push(props.projectList[i + 1]);
+        if (i + 2 < props.projectList.length) {
+          group.push(props.projectList[i + 2]);
+        }
+      }
+      projectGroups.push(group);
+    }
   }
 
   const projectSlides = projectGroups.map((group) => (

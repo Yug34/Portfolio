@@ -120,12 +120,13 @@ function App() {
             )
           }
         >
-          <TypedName name="Yug" />
-          <Projects projectList={userDetails.projectList} />
-          <Skills skills={userDetails.skills} />
+          <TypedName name="Yug" isMobile={isMobile} />
+          <Projects projectList={userDetails.projectList} isMobile={isMobile} />
+          <Skills skills={userDetails.skills} isMobile={isMobile} />
           <SeeVee
             cvLink={userDetails.seeVee.cvLink}
             cvText={userDetails.seeVee}
+            isMobile={isMobile}
           />
           <ContactMe isMobile={isMobile} />
         </Carousel>
