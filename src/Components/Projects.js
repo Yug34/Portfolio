@@ -22,7 +22,7 @@ function Projects(props) {
   }
 
   const projectSlides = projectGroups.map((group) => (
-    <div className="projectSlide">
+    <div className="projectSlide" key={group[0] ? group[0].name : "empty"}>
       {group.map((project) => (
         <Project
           key={project.name}

@@ -18,7 +18,7 @@ function Skills(props) {
   ];
 
   const disclaimerRendered = disclaimerItems.map((item) => (
-    <p key={item}>{item}</p>
+    <p key={typeof item == "object" ? item.props.children : item}>{item}</p>
   ));
 
   const skillRendered = props.skills.map((skill) => (
