@@ -31,7 +31,7 @@
     background: rgba(255,255,255,0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
-    font-size: 0.5em;
+    font-size: 1em;
     height: auto;
     outline: 0;
     padding: 15px;
@@ -42,7 +42,7 @@
 }
 
 .formInput:focus {
-    font-size: 0.5em;
+    font-size: 1em;
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255, 255, 255, 0.7);;
 }
@@ -57,9 +57,9 @@
     margin: 8px 10px;
 }
 
-/*.inlineEmail, .inlineSubject {*/
-/*    display: inline-block;*/
-/*}*/
+.inlineEmail input, .inlineSubject input {
+    font-size: 1em;
+}
 
 #submitEmail {
     color: white;
