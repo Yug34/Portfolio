@@ -1,5 +1,6 @@
 .projectArrow {
-    margin-left: 50%;
+    display: flex;
+    justify-content: center;
 }
 
 .scroll-up {
