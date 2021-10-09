@@ -26,7 +26,7 @@ const userDetails = {
       link: "https://github.com/Yug34/allBOT",
     },
     {
-      name: "CoviDetect",
+      name: "CovDetect",
       keywords: ["COV", "Detect"],
       image: covidImg,
       imageScale: "1",

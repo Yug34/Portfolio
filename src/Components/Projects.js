@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import Project from "./Project";
 import { Carousel } from "react-responsive-carousel";
-
-//TODO: Investigate if the userDetails would work if you do src={require("./pathToImage")}
 
 function Projects(props) {
   const projectGroups = [];

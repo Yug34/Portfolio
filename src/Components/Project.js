@@ -35,7 +35,7 @@ function Project(props) {
                 handleClick(e);
               }}
             >
-              More Info
+              More about {props.name}
             </a>
             <div className="circle" />
             <img
