@@ -22,7 +22,6 @@ function Project(props) {
         <div>
           <Tilt
             className={isFlipped ? "nullbox" : "box"}
-            id="box1"
             glareEnable={true}
             glareMaxOpacity={0.5}
             glareColor="#ffffff"
@@ -55,7 +54,6 @@ function Project(props) {
         <div>
           <Tilt
             className={isFlipped ? "box" : "nullbox"}
-            id="box2"
             glareEnable={true}
             glareMaxOpacity={0.5}
             glareColor="#ffffff"

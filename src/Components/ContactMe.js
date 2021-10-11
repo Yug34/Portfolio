@@ -86,25 +86,29 @@ function ContactMe(props) {
                 setMessageValue(e.target.value);
               }}
             />
-            <label
-              className="inputLabel"
-              id="sideNoteLabel"
-              htmlFor="sideNote"
-              aria-labelledby="A nice little side note input"
-            >
-              An optional but highly recommended positive message to me pretty
-              please?
-            </label>
-            <textarea
-              className="formInput"
-              id="sideNote"
-              name="sideNote"
-              autoComplete="none"
-              value={sideNoteValue}
-              onChange={(e) => {
-                setSideNoteValue(e.target.value);
-              }}
-            />
+            {props.isMobile ? null : (
+              <div>
+                <label
+                  className="inputLabel"
+                  id="sideNoteLabel"
+                  htmlFor="sideNote"
+                  aria-labelledby="A nice little side note input"
+                >
+                  An optional but highly recommended positive message to me
+                  pretty please?
+                </label>
+                <textarea
+                  className="formInput"
+                  id="sideNote"
+                  name="sideNote"
+                  autoComplete="none"
+                  value={sideNoteValue}
+                  onChange={(e) => {
+                    setSideNoteValue(e.target.value);
+                  }}
+                />
+              </div>
+            )}
           </div>
           <ValidationError
             prefix="Message"
