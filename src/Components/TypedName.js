@@ -4,9 +4,17 @@ function TypedName(props) {
   return (
     <div id="nameTitle">
       <div id="name">
-        <b>{props.name}</b>
+        {props.isMobile ? (
+          <b style={{ fontSize: "1.6em" }}>{props.name}</b>
+        ) : (
+          <b>{props.name}</b>
+        )}
       </div>
-      <div id="title" />
+      {props.isMobile ? (
+        <div style={{ fontSize: "0.75em" }} id="title" />
+      ) : (
+        <div id="title" />
+      )}
     </div>
   );
 }

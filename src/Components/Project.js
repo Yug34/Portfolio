@@ -33,6 +33,11 @@ function Project(props) {
               onClick={(e) => {
                 handleClick(e);
               }}
+              style={
+                props.isMobile
+                  ? { border: "2px solid white" }
+                  : { border: "1px solid white" }
+              }
             >
               More about {props.name}
             </a>
@@ -60,6 +65,11 @@ function Project(props) {
               onClick={(e) => {
                 handleClick(e);
               }}
+              style={
+                props.isMobile
+                  ? { border: "2px solid white" }
+                  : { border: "1px solid white" }
+              }
             >
               Unflip
             </p>
@@ -69,6 +79,11 @@ function Project(props) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="sell"
+                style={
+                  props.isMobile
+                    ? { border: "2px solid white" }
+                    : { border: "1px solid white" }
+                }
               >
                 View Source
               </a>

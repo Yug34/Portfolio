@@ -34,6 +34,7 @@ function Projects(props) {
           Img={project.image}
           description={project.description}
           link={project.link ? project.link : null}
+          isMobile={props.isMobile}
         />
       ))}
     </div>
