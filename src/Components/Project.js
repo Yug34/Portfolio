@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
 import ReactCardFlip from "react-card-flip";
 
+//TODO, fix the buttons that show up when you flip a project
+
 function Project(props) {
   let [isFlipped, setIsFlipped] = useState(false);
 
@@ -59,7 +61,9 @@ function Project(props) {
             glareColor="#ffffff"
             glarePosition="bottom"
           >
-            <ul className="list">{projectDescription}</ul>
+            <ul className={props.isMobile ? "listResponsive" : "list"}>
+              {projectDescription}
+            </ul>
             <p
               className="buy"
               onClick={(e) => {
@@ -78,7 +82,7 @@ function Project(props) {
                 href={props.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="sell"
+                className="buy"
                 style={
                   props.isMobile
                     ? { border: "2px solid white" }
