@@ -21,7 +21,12 @@ function ContactMe(props) {
     <div className={props.isMobile ? "formBoxMobile" : "formBox"}>
       <div style={{ border: "1px solid white" }}>
         <form onSubmit={handleSubmit}>
-          Contact me, don't be shy!
+          <p>
+            Contact me;{" "}
+            <i>
+              <u>don't</u> be shy!
+            </i>
+          </p>
           <div className="inputBlock" id="emailBlock">
             <div className="inlineEmail">
               <label

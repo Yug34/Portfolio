@@ -115,7 +115,7 @@
     background: transparent;
     padding: 10px 25px;
     border-radius: 30px;
-    border: white 1px solid;
+    border: 1px solid white;
     text-decoration: none;
     transition: 0.5s;
     opacity: 0;
@@ -176,11 +176,6 @@
 }
 
 .tiltContainer .box:nth-child(1) .buy {
-    background: transparent;
-    border: white 1px solid;
-}
-
-.tiltContainer .box:nth-child(1) .sell {
     background: transparent;
     border: white 1px solid;
 }
