@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
 import ReactCardFlip from "react-card-flip";
 
-//TODO, fix the buttons that show up when you flip a project
-//TODO, set display to none; if the parent class is nullbox for unflip and the other button
-
 function Project(props) {
   let [isFlipped, setIsFlipped] = useState(false);
 
@@ -40,10 +37,14 @@ function Project(props) {
                   ? {
                       border: "2px solid white",
                       display: `${isFlipped ? "none" : "inline-block"}`,
+                      margin: "auto",
+                      width: "fit-content",
                     }
                   : {
                       border: "1px solid white",
                       display: `${isFlipped ? "none" : "inline-block"}`,
+                      margin: "auto",
+                      width: "fit-content",
                     }
               }
             >

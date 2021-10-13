@@ -124,10 +124,11 @@
 
 .tiltContainer .box .sell {
     font-size: 0.5em;
+    cursor: pointer;
     margin: 30px 0 0 0;
     position: absolute;
     bottom: 0;
-    right: -30px;
+    /*right: -30px;*/
     transform-style: preserve-3d;
     transform: translate3d(-50%, 0, 75px);
     color: #fff;
