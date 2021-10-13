@@ -31,7 +31,7 @@ function Project(props) {
             <h2 className="name">{props.name}</h2>
             <a
               href={props.link}
-              className="buy"
+              className="sell"
               onClick={(e) => {
                 handleClick(e);
               }}
@@ -70,7 +70,7 @@ function Project(props) {
               {projectDescription}
             </ul>
             <p
-              className="buy"
+              className="sell"
               onClick={(e) => {
                 handleClick(e);
               }}
@@ -79,10 +79,12 @@ function Project(props) {
                   ? {
                       border: "2px solid white",
                       display: `${isFlipped ? "inline-block" : "none"}`,
+                      fontSize: "1em",
                     }
                   : {
                       border: "1px solid white",
                       display: `${isFlipped ? "inline-block" : "none"}`,
+                      fontSize: "0.5em",
                     }
               }
             >
@@ -99,10 +101,12 @@ function Project(props) {
                     ? {
                         border: "2px solid white",
                         display: `${isFlipped ? "inline-block" : "none"}`,
+                        fontSize: "1em",
                       }
                     : {
                         border: "1px solid white",
                         display: `${isFlipped ? "inline-block" : "none"}`,
+                        fontSize: "0.5em",
                       }
                 }
               >
