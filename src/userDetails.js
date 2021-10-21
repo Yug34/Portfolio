@@ -4,8 +4,13 @@ import seamlessImg from "./images/Projects/volume.png";
 import portfolioGenImg from "./images/Projects/portfolioGen.png";
 import csvqlImg from "./images/Projects/csvql.png";
 
-import cSkillImage from "./images/Skills/c-small.png";
+import jsSkillImage from "./images/Skills/javascript.png";
+import typescriptSkillImage from "./images/Skills/typescript.png";
+import reactSkillImage from "./images/Skills/react.png";
+import expressSkillImage from "./images/Skills/express.png";
 import cppSkillImage from "./images/Skills/cpp-small.png";
+import pythonSkillImage from "./images/Skills/py.png";
+import djangoSkillImage from "./images/Skills/django.png";
 
 const userDetails = {
   projectList: [
@@ -99,15 +104,45 @@ const userDetails = {
   skills: [
     {
       title: "JavaScript",
-      symbol: cSkillImage,
-      scale: 0.6,
-      description: "Aaa",
+      symbol: [
+        jsSkillImage,
+        typescriptSkillImage,
+        reactSkillImage,
+        expressSkillImage,
+      ],
+      scale: 0.9,
+      description: [
+        'Don\'t really need to say much about JS, this is my "main" language, which is use virtually ' +
+          "everyday to build software and the language which's landscape I know the most about.",
+        "Currently I work on the Front-End with React.js, I also like to think I am good at optimizing web applications on the Front-End, " +
+          "<a class='greenLink' target='_blank' rel='noopener noreferrer' href='https://drive.google.com/file/d/1CzE0ZgvGVz5feIMMeqUxgLfLRoCYVoTU/view'>here's</a> my research paper about it.",
+        "I work on the Back-End with Express, a sample of my work is <a class='greenLink' target='_blank' rel='noopener noreferrer' href='https://github.com/Yug34/gravity-backend'>Gravity</a>. " +
+          "I recently decided to shift to TypeScript for the Back-End, so I suppose you will some TS projects here soon.",
+      ],
     },
     {
-      title: "TypeScript",
-      symbol: cppSkillImage,
+      title: "C++",
+      symbol: [cppSkillImage],
       scale: 0.6,
-      description: "Bbb",
+      description: [
+        "I use C++ to work on scientific software (like <a class='greenLink' target='_blank' rel='noopener noreferrer' href='https://github.com/JeffersonLab/remoll/tree/develop'>remoll</a>) and to do some competitive programming for fun.",
+      ],
+    },
+    {
+      title: "Python for Machine Learning",
+      symbol: [pythonSkillImage],
+      scale: 0.6,
+      description: [
+        "I use C++ to work on scientific software (like <a class='greenLink' target='_blank' rel='noopener noreferrer' href='https://github.com/JeffersonLab/remoll/tree/develop'>remoll</a>) and to do some competitive programming for fun.",
+      ],
+    },
+    {
+      title: "Python for Web Development",
+      symbol: [pythonSkillImage, djangoSkillImage],
+      scale: 0.6,
+      description: [
+        "The language I started my Web Development journey with! I used Django to make <a class='greenLink' target='_blank' rel='noopener noreferrer' href='https://github.com/Yug34/stupid-blog'>a blog</a>",
+      ],
     },
   ],
 };
