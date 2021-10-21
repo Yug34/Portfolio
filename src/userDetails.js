@@ -129,19 +129,13 @@ const userDetails = {
       ],
     },
     {
-      title: "Python for Machine Learning",
-      symbol: [pythonSkillImage],
-      scale: 0.6,
-      description: [
-        "I use C++ to work on scientific software (like <a class='greenLink' target='_blank' rel='noopener noreferrer' href='https://github.com/JeffersonLab/remoll/tree/develop'>remoll</a>) and to do some competitive programming for fun.",
-      ],
-    },
-    {
-      title: "Python for Web Development",
+      title: "Python for Web Development and Machine Learning",
       symbol: [pythonSkillImage, djangoSkillImage],
-      scale: 0.6,
+      scale: 0.8,
       description: [
-        "The language I started my Web Development journey with! I used Django to make <a class='greenLink' target='_blank' rel='noopener noreferrer' href='https://github.com/Yug34/stupid-blog'>a blog</a>",
+        "The language I started my Web Development journey with! I used Django to make <a class='greenLink' target='_blank' rel='noopener noreferrer' href='https://github.com/Yug34/stupid-blog'>a blog</a>. Now I generally use Flask to make APIs for deep neural networks.",
+        "And of course... I work with ML! In fact, <a class='greenLink' href='https://github.com/Yug34/cov-detect'>one of my projects</a> I made during a competition won me a national competition by IBM, against about 125 or so teams!",
+        'What limits me in the "python landscape" is probably my knowledge of ML theory. My development landscape knowledge with python is decent.',
       ],
     },
   ],

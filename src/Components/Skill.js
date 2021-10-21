@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { generateUniqueID } from "web-vitals/dist/modules/lib/generateUniqueID";
 const ProgressBar = require("progressbar.js");
 
 function Skill(props) {
@@ -38,7 +39,12 @@ function Skill(props) {
   ));
 
   const skillSymbols = props.symbol.map((image) => (
-    <img className="skillSymbol" src={image} alt={displayString} />
+    <img
+      className="skillSymbol"
+      src={image}
+      alt={displayString}
+      key={generateUniqueID()}
+    />
   ));
 
   return (
