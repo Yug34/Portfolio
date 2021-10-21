@@ -4,9 +4,9 @@
 }
 
 .carousel .slide .skillSymbol {
-    margin-top: 20px;
-    height: 32px;
-    width: 32px;
+    margin: 20px 10px 10px 0;
+    height: 48px;
+    width: 48px;
 }
 
 #disclaimer p {
@@ -16,4 +16,9 @@
 .skillName {
     display: block;
     margin: 0;
+}
+
+.greenLink, .greenLink:visited {
+    color: greenyellow;
+    font-weight: bold;
 }

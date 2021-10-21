@@ -2,8 +2,12 @@ import React, { useEffect } from "react";
 const ProgressBar = require("progressbar.js");
 
 function Skill(props) {
+  //Hacky, sorry! I'm lazy.
+  const displayString = props.title.replace(/1/gm, " ").replace(/_/gm, "+");
+  const idString = props.title.replace(/ /gm, "1").replace(/\+/gm, "_");
+
   useEffect(() => {
-    let bar = new ProgressBar.Line(`#${props.title}`, {
+    let bar = new ProgressBar.Line(`#${idString}`, {
       strokeWidth: 1,
       easing: "easeInOut",
       duration: 1400,
@@ -24,15 +28,27 @@ function Skill(props) {
     });
 
     bar.animate(props.scale);
-  }, [props.scale, props.title]);
+  }, [props.scale, props.title, idString]);
+
+  const skillDescriptionRendered = props.description.map((descItem) => (
+    <p
+      key={typeof descItem == "object" ? descItem.props.children : descItem}
+      dangerouslySetInnerHTML={{ __html: descItem }}
+    />
+  ));
+
+  const skillSymbols = props.symbol.map((image) => (
+    <img className="skillSymbol" src={image} alt={displayString} />
+  ));
 
   return (
     <div className="skill">
       <div>
-        <img className="skillSymbol" src={props.symbol} alt={props.title} />
-        <p className="skillName">{props.title}</p>
+        {skillSymbols}
+        <p className="skillName">{displayString}</p>
+        <div className="skillDescription">{skillDescriptionRendered}</div>
       </div>
-      <div className="skillLevelBar" id={props.title} />
+      <div className="skillLevelBar" id={idString} />
     </div>
   );
 }
