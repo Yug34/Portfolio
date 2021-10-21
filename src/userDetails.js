@@ -11,6 +11,7 @@ import expressSkillImage from "./images/Skills/express.png";
 import cppSkillImage from "./images/Skills/cpp-small.png";
 import pythonSkillImage from "./images/Skills/py.png";
 import djangoSkillImage from "./images/Skills/django.png";
+import cmakeSkillImage from "./images/Skills/cmake.png";
 
 const userDetails = {
   projectList: [
@@ -112,7 +113,7 @@ const userDetails = {
       ],
       scale: 0.9,
       description: [
-        'Don\'t really need to say much about JS, this is my "main" language, which is use virtually ' +
+        'JS is my "main" language, which is use virtually ' +
           "everyday to build software and the language which's landscape I know the most about.",
         "Currently I work on the Front-End with React.js, I also like to think I am good at optimizing web applications on the Front-End, " +
           "<a class='greenLink' target='_blank' rel='noopener noreferrer' href='https://drive.google.com/file/d/1CzE0ZgvGVz5feIMMeqUxgLfLRoCYVoTU/view'>here's</a> my research paper about it.",
@@ -122,10 +123,11 @@ const userDetails = {
     },
     {
       title: "C++",
-      symbol: [cppSkillImage],
+      symbol: [cppSkillImage, cmakeSkillImage],
       scale: 0.6,
       description: [
-        "I use C++ to work on scientific software (like <a class='greenLink' target='_blank' rel='noopener noreferrer' href='https://github.com/JeffersonLab/remoll/tree/develop'>remoll</a>) and to do some competitive programming for fun.",
+        "I use C++ to work on scientific software (like <a class='greenLink' target='_blank' rel='noopener noreferrer' href='https://github.com/JeffersonLab/remoll/tree/develop'>remoll</a>) and to do some competitive programming for fun. Used package managers like Spack",
+        "..or CMake for buildsystems. But I'd never really call myself a \"C++ developer\", I'm not. Oh and of course, I have decent knowledge of the STL.",
       ],
     },
     {
