@@ -44,6 +44,9 @@ function Skill(props) {
       src={image}
       alt={displayString}
       key={generateUniqueID()}
+      style={
+        props.isMobile ? { width: "32px", height: "auto" } : { width: "64px" }
+      }
     />
   ));
 

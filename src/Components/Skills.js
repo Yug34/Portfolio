@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import Skill from "./Skill";
 import ReactCardFlip from "react-card-flip";
-import Tilt from "react-parallax-tilt";
 
 //TODO: React card flip for the disclaimer, upon flip the disclaimer should be hidden and the skills would show
 //TODO: A makeshift card flip logic to "carousel" through the cards but by flipping? Would be a nice fun challenge!
@@ -37,6 +36,7 @@ function Skills(props) {
 
   const skillRendered = props.skills.map((skill) => (
     <Skill
+      isMobile={props.isMobile}
       title={skill.title.toString().replace(/\+/gm, "_")}
       symbol={skill.symbol}
       scale={skill.scale}
