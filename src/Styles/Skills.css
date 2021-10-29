@@ -22,3 +22,16 @@
     color: greenyellow;
     font-weight: bold;
 }
+
+.flipButton {
+    font-size: 0.5em;
+    cursor: pointer;
+    color: #fff;
+    background: transparent;
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: 1px solid white;
+    text-decoration: none;
+    transition: 0.5s;
+    z-index: 10;
+}

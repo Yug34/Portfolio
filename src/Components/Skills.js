@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Skill from "./Skill";
+import ReactCardFlip from "react-card-flip";
+import Tilt from "react-parallax-tilt";
 
 //TODO: React card flip for the disclaimer, upon flip the disclaimer should be hidden and the skills would show
-//TODO: A makeshoft card flip logic to "carousel" through the cards but by flipping? Would be a nice fun challenge!
+//TODO: A makeshift card flip logic to "carousel" through the cards but by flipping? Would be a nice fun challenge!
 
 function Skills(props) {
+  let [isFlipped, setIsFlipped] = useState(false);
+
+  const flip = (e) => {
+    e.preventDefault();
+    setIsFlipped(!isFlipped);
+  };
+
   // If you are reading this code and wondering why the hell I kept the following static strings/JSX in an array instead of in the render/return function
   // Eh I just like short render functions.
   const disclaimerItems = [
@@ -38,8 +47,36 @@ function Skills(props) {
 
   return (
     <div className="skills">
-      <div id="disclaimer">{disclaimerRendered}</div>
-      {skillRendered}
+      <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+        <div>
+          <div id="disclaimer">{disclaimerRendered}</div>
+          <a
+            href={"#disclaimer"}
+            className="flipButton"
+            onClick={(e) => {
+              flip(e);
+            }}
+            style={
+              props.isMobile
+                ? {
+                    border: "2px solid white",
+                    display: `${isFlipped ? "none" : "inline-block"}`,
+                    margin: "auto",
+                    width: "fit-content",
+                  }
+                : {
+                    border: "1px solid white",
+                    display: `${isFlipped ? "none" : "inline-block"}`,
+                    margin: "auto",
+                    width: "fit-content",
+                  }
+            }
+          >
+            Okidoki, Flip!
+          </a>
+        </div>
+        <div>{skillRendered}</div>
+      </ReactCardFlip>
     </div>
   );
 }

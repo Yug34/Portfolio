@@ -79,12 +79,12 @@ function Project(props) {
                 props.isMobile
                   ? {
                       border: "2px solid white",
-                      display: `${isFlipped ? "inline-block" : "none"}`,
+                      display: `${!isFlipped ? "none" : "inline-block"}`,
                       fontSize: "1em",
                     }
                   : {
                       border: "1px solid white",
-                      display: `${isFlipped ? "inline-block" : "none"}`,
+                      display: `${!isFlipped ? "none" : "inline-block"}`,
                       fontSize: "0.5em",
                     }
               }

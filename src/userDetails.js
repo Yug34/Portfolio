@@ -12,6 +12,7 @@ import cppSkillImage from "./images/Skills/cpp-small.png";
 import pythonSkillImage from "./images/Skills/py.png";
 import djangoSkillImage from "./images/Skills/django.png";
 import cmakeSkillImage from "./images/Skills/cmake.png";
+import tensorflowSkillImage from "./images/Skills/tf.png";
 
 const userDetails = {
   projectList: [
@@ -114,7 +115,7 @@ const userDetails = {
       scale: 0.9,
       description: [
         'JS is my "main" language, which is use virtually ' +
-          "everyday to build software and the language which's landscape I know the most about.",
+          "everyday to build software and the language which's ecosystem I know the most about.",
         "Currently I work on the Front-End with React.js, I also like to think I am good at optimizing web applications on the Front-End, " +
           "<a class='greenLink' target='_blank' rel='noopener noreferrer' href='https://drive.google.com/file/d/1CzE0ZgvGVz5feIMMeqUxgLfLRoCYVoTU/view'>here's</a> my research paper about it.",
         "I work on the Back-End with Express, a sample of my work is <a class='greenLink' target='_blank' rel='noopener noreferrer' href='https://github.com/Yug34/gravity-backend'>Gravity</a>. " +
@@ -132,12 +133,12 @@ const userDetails = {
     },
     {
       title: "Python for Web Development and Machine Learning",
-      symbol: [pythonSkillImage, djangoSkillImage],
+      symbol: [pythonSkillImage, tensorflowSkillImage, djangoSkillImage],
       scale: 0.8,
       description: [
         "The language I started my Web Development journey with! I used Django to make <a class='greenLink' target='_blank' rel='noopener noreferrer' href='https://github.com/Yug34/stupid-blog'>a blog</a>. Now I generally use Flask to make APIs for deep neural networks.",
         "And of course... I work with ML! In fact, <a class='greenLink' href='https://github.com/Yug34/cov-detect'>one of my projects</a> I made during a competition won me a national competition by IBM, against about 125 or so teams!",
-        'What limits me in the "python landscape" is probably my knowledge of ML theory. My development landscape knowledge with python is decent.',
+        'What limits me in the "python landscape" is probably my knowledge of ML theory. My development oriented ecosystem knowledge with python is decent.',
       ],
     },
   ],
