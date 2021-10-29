@@ -14,26 +14,6 @@ function Skills(props) {
     setIsFlipped(!isFlipped);
   };
 
-  // If you are reading this code and wondering why the hell I kept the following static strings/JSX in an array instead of in the render/return function
-  // Eh I just like short render functions.
-  const disclaimerItems = [
-    "Anyone could rate themselves arbitrarily and the assessing person would have no idea what the ratings mean.",
-    <u>
-      So, what exactly do I mean when I list these skills and give a rating to
-      myself?
-    </u>,
-    "If I list the language here, I know it's syntax. The rating isn't about syntactic knowledge of the languages.",
-    <i className="greentext">
-      Rather, it is about how much of the development frameworks, paradigms and
-      practices I know in that language's ecosystem.
-    </i>,
-    "But of course, my confidence in myself while working with these technologies plays a part too :)",
-  ];
-
-  const disclaimerRendered = disclaimerItems.map((item) => (
-    <p key={typeof item == "object" ? item.props.children : item}>{item}</p>
-  ));
-
   const skillRendered = props.skills.map((skill) => (
     <Skill
       isMobile={props.isMobile}
@@ -49,7 +29,28 @@ function Skills(props) {
     <div className="skills">
       <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
         <div>
-          <div id="disclaimer">{disclaimerRendered}</div>
+          <div id="disclaimer">
+            <p>
+              Anyone could rate themselves arbitrarily and the assessing person
+              would have no idea what the ratings mean.
+            </p>
+            <u>
+              So, what exactly do I mean when I list these skills and give a
+              rating to myself?
+            </u>
+            <p>
+              If I list the language here, I know it's syntax. The rating isn't
+              about syntactic knowledge of the languages.
+            </p>
+            <i className="greentext">
+              Rather, it is about how much of the development frameworks,
+              paradigms and practices I know in that language's ecosystem.
+            </i>
+            <p>
+              But of course, my confidence in myself while working with these
+              technologies plays a part too :)
+            </p>
+          </div>
           <a
             href={"#disclaimer"}
             className="flipButton"

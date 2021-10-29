@@ -9,7 +9,7 @@
     width: 48px;
 }
 
-#disclaimer p {
+#disclaimer * {
     font-size: 0.5em;
 }
 
