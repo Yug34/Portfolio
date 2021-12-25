@@ -1,7 +1,6 @@
 //Project TODO(s):
 //TODO 1: switch to useContext
 //TODO 2: maybe next.js?
-//TODO 3:
 
 import "./Styles/App.css";
 import "./Styles/Arrow.css";
@@ -16,13 +15,13 @@ import React, { useState, useEffect } from "react";
 import WAVES from "vanta/dist/vanta.waves.min";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Typed from "typed.js";
 
 import userDetails from "./userDetails";
 import Projects from "./Components/Projects";
 import TypedName from "./Components/TypedName";
 import SeeVee from "./Components/SeeVee";
 import ContactMe from "./Components/ContactMe";
-import Typed from "typed.js";
 import Skills from "./Components/Skills";
 
 function App() {

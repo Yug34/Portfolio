@@ -2,10 +2,19 @@ import React, { useEffect } from "react";
 import { generateUniqueID } from "web-vitals/dist/modules/lib/generateUniqueID";
 const ProgressBar = require("progressbar.js");
 
-function Skill(props) {
+type SkillProps = {
+  isMobile: boolean,
+  title: string,
+  symbol: string[],
+  scale: number,
+  description: string[],
+  key: string
+}
+
+function Skill(props: SkillProps): JSX.Element {
   //Hacky, sorry! I'm lazy.
-  const displayString = props.title.replace(/1/gm, " ").replace(/_/gm, "+");
-  const idString = props.title.replace(/ /gm, "1").replace(/\+/gm, "_");
+  const displayString: string = props.title.replace(/1/gm, " ").replace(/_/gm, "+");
+  const idString: string = props.title.replace(/ /gm, "1").replace(/\+/gm, "_");
 
   useEffect(() => {
     let bar = new ProgressBar.Line(`#${idString}`, {
@@ -23,7 +32,7 @@ function Skill(props) {
       },
       from: { color: "#000" },
       to: { color: "#fff" },
-      step: (state, bar) => {
+      step: (state: {offset: number, color: string}, bar: any) => {
         bar.path.setAttribute("stroke", state.color);
       },
     });
@@ -31,14 +40,14 @@ function Skill(props) {
     bar.animate(props.scale);
   }, [props.scale, props.title, idString]);
 
-  const skillDescriptionRendered = props.description.map((descItem) => (
+  const skillDescriptionRendered: JSX.Element[] | JSX.Element = props.description.map((descItem: string ) => (
     <p
-      key={typeof descItem == "object" ? descItem.props.children : descItem}
+      key={descItem}
       dangerouslySetInnerHTML={{ __html: descItem }}
     />
   ));
 
-  const skillSymbols = props.symbol.map((image) => (
+  const skillSymbols: JSX.Element[] | JSX.Element = props.symbol.map((image) => (
     <img
       className="skillSymbol"
       src={image}

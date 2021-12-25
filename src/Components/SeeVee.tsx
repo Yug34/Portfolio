@@ -1,18 +1,14 @@
 import React from "react";
 import cvImage from "../images/cv.jpg";
 
-function SeeVee(props) {
-  const text = [
-    "Is that you? Finally! I've been waiting here, where have you been? How are you?",
-    "It's been ages, I feel like we don't know each other anymore.",
-    "We were really close, weren't we? Or maybe I'm getting you mixed up, it really has been that long.",
-    "Well, that's all behind us now, I'm just glad that you have come found me here.",
-    "I've been so preoccupied lately that I must have forgotten to call.",
-    "I'm sorry. The energy lies in learning, anyway, I'll learn to be better. For you, to you.",
-    "I've been thinking a lot about us. What we could be... it sounds silly.",
-  ];
+type SeeVeeProps = {
+    cvLink: string,
+    cvText: string[],
+    isMobile: boolean
+};
 
-  const cvText = text.map((sentence) => (
+function SeeVee(props: SeeVeeProps): JSX.Element {
+  const cvText: JSX.Element[] | JSX.Element = props.cvText.map((sentence) => (
     <p className="cvTextPara" key={sentence}>
       {sentence}
     </p>
@@ -27,7 +23,7 @@ function SeeVee(props) {
       <div
         id="cvImageContainer"
         onClick={() => {
-          const link = document.createElement("a");
+          const link: HTMLAnchorElement = document.createElement("a");
           link.href = props.cvLink;
           link.click();
         }}
