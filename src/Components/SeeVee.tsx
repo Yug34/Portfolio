@@ -1,8 +1,6 @@
 import React from "react";
 import cvImage from "../images/cv.jpg";
 
-//TODO: Make usable for mobile devices
-
 function SeeVee(props) {
   const text = [
     "Is that you? Finally! I've been waiting here, where have you been? How are you?",

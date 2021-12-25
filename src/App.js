@@ -1,3 +1,8 @@
+//Project TODO(s):
+//TODO 1: switch to useContext
+//TODO 2: maybe next.js?
+//TODO 3:
+
 import "./Styles/App.css";
 import "./Styles/Arrow.css";
 import "./Styles/ProjectArrow.css";
@@ -125,7 +130,7 @@ function App() {
           <Skills skills={userDetails.skills} isMobile={isMobile} />
           <SeeVee
             cvLink={userDetails.seeVee.cvLink}
-            cvText={userDetails.seeVee}
+            cvText={userDetails.seeVee.cvText}
             isMobile={isMobile}
           />
           <ContactMe isMobile={isMobile} />
