@@ -1,15 +1,29 @@
-import React, { useState } from "react";
+import React, {BaseSyntheticEvent, useState} from "react";
 
 import Skill from "./Skill";
 import ReactCardFlip from "react-card-flip";
 
 //TODO: A makeshift card flip logic to "carousel" through the cards but by flipping? Would be a nice fun challenge!
 
-function Skills(props) {
-  let [isFlipped, setIsFlipped] = useState(false);
+type SkillsProps = {
+  isMobile: boolean,
+  skills: {
+    isMobile: boolean,
+    title: string,
+    symbol: string[],
+    scale: number,
+    description: string[],
+    key: string
+  }[]
+}
 
-  const flip = (e) => {
+function Skills(props: SkillsProps) {
+  let [isFlipped, setIsFlipped]: [boolean, any] = useState(false);
+
+  const flip = (e: BaseSyntheticEvent): void => {
     e.preventDefault();
+    console.log(typeof setIsFlipped);
+    console.log(setIsFlipped)
     setIsFlipped(!isFlipped);
   };
 
@@ -53,7 +67,7 @@ function Skills(props) {
           <a
             href={"#disclaimer"}
             className="flipButton"
-            onClick={(e) => {
+            onClick={(e: BaseSyntheticEvent) => {
               flip(e);
             }}
             style={

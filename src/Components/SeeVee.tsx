@@ -22,7 +22,7 @@ function SeeVee(props: SeeVeeProps): JSX.Element {
       </div>
       <div
         id="cvImageContainer"
-        onClick={() => {
+        onClick={(): void => {
           const link: HTMLAnchorElement = document.createElement("a");
           link.href = props.cvLink;
           link.click();

@@ -17,7 +17,7 @@ function Skill(props: SkillProps): JSX.Element {
   const idString: string = props.title.replace(/ /gm, "1").replace(/\+/gm, "_");
 
   useEffect(() => {
-    let bar = new ProgressBar.Line(`#${idString}`, {
+    let bar: any = new ProgressBar.Line(`#${idString}`, {
       strokeWidth: 1,
       easing: "easeInOut",
       duration: 1400,
