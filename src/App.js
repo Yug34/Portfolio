@@ -27,7 +27,7 @@ import {IsMobileContext} from "./Contexts/IsMobile";
 
 function App() {
   const [vantaRef] = useState(React.createRef());
-  // const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     // eslint-disable-next-line no-unused-vars
@@ -48,7 +48,7 @@ function App() {
     if (mql.matches) {
       document.getElementById("prevArrow").style.display = "none";
       document.getElementById("nextArrow").style.display = "none";
-      // setIsMobile(true);
+      setIsMobile(true);
     }
   }, []);
 
@@ -74,7 +74,7 @@ function App() {
   return (
     <div className="App">
       <div className="App-header" ref={vantaRef}>
-        <IsMobileContext.Provider value={true}>
+        <IsMobileContext.Provider value={{ isMobile, setIsMobile }}>
           <Carousel
             showThumbs={false}
             showArrows={true}
@@ -126,7 +126,6 @@ function App() {
               )
             }
           >
-            {/*<Projects projectList={userDetails.projectList} isMobile={isMobile} />*/}
             <TypedName name="Yug" />
             <Projects projectList={userDetails.projectList} />
             <Skills skills={userDetails.skills} />

@@ -4,7 +4,9 @@ import Project from "./Project";
 import { Carousel } from "react-responsive-carousel";
 
 function Projects(props) {
-  const isMobile = useContext(IsMobileContext);
+  // const {isMobile, setIsMobile} = useContext(IsMobileContext);
+  const {isMobile, } = useContext(IsMobileContext);
+
   const projectGroups = [];
   if (isMobile) {
     for (let i = 0; i < props.projectList.length; i++) {

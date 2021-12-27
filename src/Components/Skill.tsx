@@ -15,6 +15,8 @@ function Skill(props: SkillProps): JSX.Element {
   //Hacky, sorry! I'm lazy.
   const displayString: string = props.title.replace(/1/gm, " ").replace(/_/gm, "+");
   const idString: string = props.title.replace(/ /gm, "1").replace(/\+/gm, "_");
+
+  // const {isMobile, setIsMobile} = useContext(IsMobileContext);
   const isMobile = useContext(IsMobileContext);
 
   useEffect(() => {

@@ -4,7 +4,8 @@ import Tilt from "react-parallax-tilt";
 import ReactCardFlip from "react-card-flip";
 
 function Project(props) {
-  const isMobile = useContext(IsMobileContext);
+  // const {isMobile, setIsMobile} = useContext(IsMobileContext);
+  const {isMobile, } = useContext(IsMobileContext);
   let [isFlipped, setIsFlipped] = useState(false);
 
   const handleClick = (e) => {

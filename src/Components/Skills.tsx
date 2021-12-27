@@ -18,6 +18,8 @@ type SkillsProps = {
 
 function Skills(props: SkillsProps) {
   const [isFlipped, setIsFlipped]: [boolean, any] = useState(false);
+
+  // const {isMobile, setIsMobile} = useContext(IsMobileContext);
   const isMobile = useContext(IsMobileContext);
 
   const flip = (e: BaseSyntheticEvent): void => {

@@ -2,7 +2,8 @@ import React, {useContext} from "react"
 import {IsMobileContext} from "../Contexts/IsMobile";
 
 function TypedName(props) {
-  const isMobile = useContext(IsMobileContext);
+  // const {isMobile, setIsMobile} = useContext(IsMobileContext);
+  const {isMobile, } = useContext(IsMobileContext);
 
   return (
     <div id="nameTitle">

@@ -8,7 +8,9 @@ function ContactMe(props) {
   const [emailValue, setEmailValue] = useState("");
   const [messageValue, setMessageValue] = useState("");
   const [sideNoteValue, setSideNoteValue] = useState("");
-  const isMobile = useContext(IsMobileContext);
+
+  // const {isMobile, setIsMobile} = useContext(IsMobileContext);
+  const {isMobile, } = useContext(IsMobileContext);
 
   if (state.succeeded) {
     return (
