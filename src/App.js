@@ -46,8 +46,6 @@ function App() {
 
     const mql = window.matchMedia("all and (max-width: 767px)");
     if (mql.matches) {
-      document.getElementById("prevArrow").style.display = "none";
-      document.getElementById("nextArrow").style.display = "none";
       setIsMobile(true);
     }
   }, []);
@@ -84,7 +82,7 @@ function App() {
             interval={1000000}
             swipeScrollTolerance={20}
             renderArrowNext={(onClickHandler, hasNext, label) =>
-              hasNext && (
+              hasNext && !isMobile && (
                 <div
                   id="nextArrow"
                   onClick={onClickHandler}
@@ -105,7 +103,7 @@ function App() {
               )
             }
             renderArrowPrev={(onClickHandler, hasPrev, label) =>
-              hasPrev && (
+              hasPrev && !isMobile && (
                 <div
                   id="prevArrow"
                   onClick={onClickHandler}
