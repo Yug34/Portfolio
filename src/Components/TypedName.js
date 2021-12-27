@@ -1,16 +1,19 @@
-import React from "react";
+import React, {useContext} from "react"
+import {IsMobileContext} from "../Contexts/IsMobile";
 
 function TypedName(props) {
+  const isMobile = useContext(IsMobileContext);
+
   return (
     <div id="nameTitle">
       <div id="name">
-        {props.isMobile ? (
+        {isMobile ? (
           <b style={{ fontSize: "1.6em" }}>{props.name}</b>
         ) : (
           <b>{props.name}</b>
         )}
       </div>
-      {props.isMobile ? (
+      {isMobile ? (
         <div style={{ fontSize: "0.75em" }} id="title" />
       ) : (
         <div id="title" />

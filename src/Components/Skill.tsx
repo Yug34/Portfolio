@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React, {useContext, useEffect} from "react";
+import {IsMobileContext} from "../Contexts/IsMobile";
 import { generateUniqueID } from "web-vitals/dist/modules/lib/generateUniqueID";
 const ProgressBar = require("progressbar.js");
 
 type SkillProps = {
-  isMobile: boolean,
   title: string,
   symbol: string[],
   scale: number,
@@ -15,6 +15,7 @@ function Skill(props: SkillProps): JSX.Element {
   //Hacky, sorry! I'm lazy.
   const displayString: string = props.title.replace(/1/gm, " ").replace(/_/gm, "+");
   const idString: string = props.title.replace(/ /gm, "1").replace(/\+/gm, "_");
+  const isMobile = useContext(IsMobileContext);
 
   useEffect(() => {
     let bar: any = new ProgressBar.Line(`#${idString}`, {
@@ -54,7 +55,7 @@ function Skill(props: SkillProps): JSX.Element {
       alt={displayString}
       key={generateUniqueID()}
       style={
-        props.isMobile
+        isMobile
           ? { width: "32px", height: "32px" }
           : { width: "64px", height: "64px" }
       }

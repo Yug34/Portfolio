@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import {IsMobileContext} from "../Contexts/IsMobile";
+
 function ContactMe(props) {
   const [state, handleSubmit] = useForm("xpzkbzob");
   const [subjectValue, setSubjectValue] = useState("Yug please work with me");
   const [emailValue, setEmailValue] = useState("");
   const [messageValue, setMessageValue] = useState("");
   const [sideNoteValue, setSideNoteValue] = useState("");
+  const isMobile = useContext(IsMobileContext);
 
   if (state.succeeded) {
     return (
-      <div className={props.isMobile ? "formBoxMobile" : "formBox"}>
+      <div className={isMobile ? "formBoxMobile" : "formBox"}>
         <div style={{ border: "1px solid greenyellow" }}>
           <p>Thanks for contacting me! You're awesome. :)</p>
         </div>
@@ -18,7 +21,7 @@ function ContactMe(props) {
   }
 
   return (
-    <div className={props.isMobile ? "formBoxMobile" : "formBox"}>
+    <div className={isMobile ? "formBoxMobile" : "formBox"}>
       <div style={{ border: "1px solid white" }}>
         <form onSubmit={handleSubmit}>
           <p>
@@ -91,7 +94,7 @@ function ContactMe(props) {
                 setMessageValue(e.target.value);
               }}
             />
-            {props.isMobile ? null : (
+            {isMobile ? null : (
               <div>
                 <label
                   className="inputLabel"

@@ -1,14 +1,13 @@
-import React, {BaseSyntheticEvent, useState} from "react";
+import React, {BaseSyntheticEvent, useContext, useState} from "react";
 
 import Skill from "./Skill";
 import ReactCardFlip from "react-card-flip";
+import {IsMobileContext} from "../Contexts/IsMobile";
 
 //TODO: A makeshift card flip logic to "carousel" through the cards but by flipping? Would be a nice fun challenge!
 
 type SkillsProps = {
-  isMobile: boolean,
   skills: {
-    isMobile: boolean,
     title: string,
     symbol: string[],
     scale: number,
@@ -18,7 +17,8 @@ type SkillsProps = {
 }
 
 function Skills(props: SkillsProps) {
-  let [isFlipped, setIsFlipped]: [boolean, any] = useState(false);
+  const [isFlipped, setIsFlipped]: [boolean, any] = useState(false);
+  const isMobile = useContext(IsMobileContext);
 
   const flip = (e: BaseSyntheticEvent): void => {
     e.preventDefault();
@@ -29,7 +29,6 @@ function Skills(props: SkillsProps) {
 
   const skillRendered = props.skills.map((skill) => (
     <Skill
-      isMobile={props.isMobile}
       title={skill.title.toString().replace(/\+/gm, "_")}
       symbol={skill.symbol}
       scale={skill.scale}
@@ -71,7 +70,7 @@ function Skills(props: SkillsProps) {
               flip(e);
             }}
             style={
-              props.isMobile
+              isMobile
                 ? {
                     border: "2px solid white",
                     display: `${isFlipped ? "none" : "inline-block"}`,

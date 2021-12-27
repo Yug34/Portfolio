@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import {IsMobileContext} from "../Contexts/IsMobile";
 import Project from "./Project";
 import { Carousel } from "react-responsive-carousel";
 
 function Projects(props) {
+  const isMobile = useContext(IsMobileContext);
   const projectGroups = [];
-  if (props.isMobile) {
+  if (isMobile) {
     for (let i = 0; i < props.projectList.length; i++) {
       projectGroups.push([props.projectList[i]]);
     }
@@ -33,7 +35,6 @@ function Projects(props) {
           Img={project.image}
           description={project.description}
           link={project.link ? project.link : null}
-          isMobile={props.isMobile}
         />
       ))}
     </div>

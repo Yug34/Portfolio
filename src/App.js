@@ -23,10 +23,11 @@ import TypedName from "./Components/TypedName";
 import SeeVee from "./Components/SeeVee";
 import ContactMe from "./Components/ContactMe";
 import Skills from "./Components/Skills";
+import {IsMobileContext} from "./Contexts/IsMobile";
 
 function App() {
   const [vantaRef] = useState(React.createRef());
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     // eslint-disable-next-line no-unused-vars
@@ -47,7 +48,7 @@ function App() {
     if (mql.matches) {
       document.getElementById("prevArrow").style.display = "none";
       document.getElementById("nextArrow").style.display = "none";
-      setIsMobile(true);
+      // setIsMobile(true);
     }
   }, []);
 
@@ -73,22 +74,23 @@ function App() {
   return (
     <div className="App">
       <div className="App-header" ref={vantaRef}>
-        <Carousel
-          showThumbs={false}
-          showArrows={true}
-          statusFormatter={() => {}}
-          infiniteLoop={true}
-          autoPlay={true}
-          interval={1000000}
-          swipeScrollTolerance={20}
-          renderArrowNext={(onClickHandler, hasNext, label) =>
-            hasNext && (
-              <div
-                id="nextArrow"
-                onClick={onClickHandler}
-                title={label}
-                style={{ zIndex: "100" }}
-              >
+        <IsMobileContext.Provider value={true}>
+          <Carousel
+            showThumbs={false}
+            showArrows={true}
+            statusFormatter={() => {}}
+            infiniteLoop={true}
+            autoPlay={true}
+            interval={1000000}
+            swipeScrollTolerance={20}
+            renderArrowNext={(onClickHandler, hasNext, label) =>
+              hasNext && (
+                <div
+                  id="nextArrow"
+                  onClick={onClickHandler}
+                  title={label}
+                  style={{ zIndex: "100" }}
+                >
                 <span
                   className="arrow-up"
                   style={{ transform: "rotate(90deg)" }}
@@ -99,17 +101,17 @@ function App() {
                     <span className="arrow-slide" />
                   </div>
                 </span>
-              </div>
-            )
-          }
-          renderArrowPrev={(onClickHandler, hasPrev, label) =>
-            hasPrev && (
-              <div
-                id="prevArrow"
-                onClick={onClickHandler}
-                title={label}
-                style={{ zIndex: "100" }}
-              >
+                </div>
+              )
+            }
+            renderArrowPrev={(onClickHandler, hasPrev, label) =>
+              hasPrev && (
+                <div
+                  id="prevArrow"
+                  onClick={onClickHandler}
+                  title={label}
+                  style={{ zIndex: "100" }}
+                >
                 <span
                   className="arrow-up"
                   style={{ transform: "rotate(-90deg)" }}
@@ -120,20 +122,21 @@ function App() {
                     <span className="arrow-slide" />
                   </div>
                 </span>
-              </div>
-            )
-          }
-        >
-          <TypedName name="Yug" isMobile={isMobile} />
-          <Projects projectList={userDetails.projectList} isMobile={isMobile} />
-          <Skills skills={userDetails.skills} isMobile={isMobile} />
-          <SeeVee
-            cvLink={userDetails.seeVee.cvLink}
-            cvText={userDetails.seeVee.cvText}
-            isMobile={isMobile}
-          />
-          <ContactMe isMobile={isMobile} />
-        </Carousel>
+                </div>
+              )
+            }
+          >
+            {/*<Projects projectList={userDetails.projectList} isMobile={isMobile} />*/}
+            <TypedName name="Yug" />
+            <Projects projectList={userDetails.projectList} />
+            <Skills skills={userDetails.skills} />
+            <SeeVee
+              cvLink={userDetails.seeVee.cvLink}
+              cvText={userDetails.seeVee.cvText}
+            />
+            <ContactMe />
+          </Carousel>
+        </IsMobileContext.Provider>
       </div>
     </div>
   );

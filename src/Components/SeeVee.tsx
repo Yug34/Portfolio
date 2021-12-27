@@ -1,13 +1,15 @@
 import React from "react";
+// import React, {useContext} from "react";
 import cvImage from "../images/cv.jpg";
+// import {IsMobileContext} from "../Contexts/IsMobile";
 
 type SeeVeeProps = {
     cvLink: string,
     cvText: string[],
-    isMobile: boolean
 };
 
 function SeeVee(props: SeeVeeProps): JSX.Element {
+  // const isMobile = useContext(IsMobileContext);
   const cvText: JSX.Element[] | JSX.Element = props.cvText.map((sentence) => (
     <p className="cvTextPara" key={sentence}>
       {sentence}

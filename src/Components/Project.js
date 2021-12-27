@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import {IsMobileContext} from "../Contexts/IsMobile";
 import Tilt from "react-parallax-tilt";
 import ReactCardFlip from "react-card-flip";
 
 function Project(props) {
+  const isMobile = useContext(IsMobileContext);
   let [isFlipped, setIsFlipped] = useState(false);
 
   const handleClick = (e) => {
@@ -33,7 +35,7 @@ function Project(props) {
                 handleClick(e);
               }}
               style={
-                props.isMobile
+                isMobile
                   ? {
                       border: "2px solid white",
                       display: `${isFlipped ? "none" : "inline-block"}`,
@@ -67,7 +69,7 @@ function Project(props) {
             glareColor="#ffffff"
             glarePosition="bottom"
           >
-            <ul className={props.isMobile ? "listResponsive" : "list"}>
+            <ul className={isMobile ? "listResponsive" : "list"}>
               {projectDescription}
             </ul>
             <p
@@ -76,7 +78,7 @@ function Project(props) {
                 handleClick(e);
               }}
               style={
-                props.isMobile
+                isMobile
                   ? {
                       border: "2px solid white",
                       display: `${!isFlipped ? "none" : "inline-block"}`,
@@ -98,7 +100,7 @@ function Project(props) {
                 rel="noopener noreferrer"
                 className="buy"
                 style={
-                  props.isMobile
+                  isMobile
                     ? {
                         border: "2px solid white",
                         display: `${isFlipped ? "inline-block" : "none"}`,
