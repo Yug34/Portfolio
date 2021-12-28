@@ -3,6 +3,10 @@
     margin-top: 10px;
 }
 
+#skillsContainer {
+    margin: 10px 25px;
+}
+
 .carousel .slide .skillSymbol {
     margin: 20px 10px 10px 0;
     height: 48px;

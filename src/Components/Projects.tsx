@@ -3,9 +3,21 @@ import {IsMobileContext} from "../Contexts/IsMobile";
 import Project from "./Project";
 import { Carousel } from "react-responsive-carousel";
 
-function Projects(props) {
-  // const {isMobile, setIsMobile} = useContext(IsMobileContext);
-  const {isMobile, } = useContext(IsMobileContext);
+type ProjectsProps = {
+  projectList: {
+    name: string,
+    keywords: string[],
+    image: string,
+    imageScale: string,
+    description: string[],
+    link: string,
+    key: string
+  }[]
+}
+
+function Projects(props: ProjectsProps): JSX.Element {
+  // const {isMobile, } = useContext(IsMobileContext);
+  const isMobile = useContext(IsMobileContext);
 
   const projectGroups = [];
   if (isMobile) {
@@ -47,7 +59,7 @@ function Projects(props) {
       <Carousel
         showArrows={true}
         showThumbs={false}
-        statusFormatter={() => {}}
+        statusFormatter={() => {return "";}}
         axis="vertical"
         showIndicators={false}
         infiniteLoop={true}
